@@ -1,0 +1,72 @@
+/*Table of Contents
+1. Imports
+2. General Rules
+3. Mobile Rules
+4. Large Screen Rules
+
+*/
+
+/* 1.  Includes (fonts and supplementary stylesheets) */
+/*normalizing import*/
+@import url('normalize.css');
+/*Google Font import*/
+@import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+
+/*General Styles*/
+html {
+    box-sizing: border-box;
+   }
+   
+   *, *:before, *:after{
+    box-sizing: inherit;
+   }
+
+body{
+  font-family: helvetica, verdana, sans-serif;
+  font-size: 20px;
+}   
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: sansita, Eurostyle, sans-serif;
+  }
+
+.tile{
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+
+nav ul li { 
+    display: inline-block; 
+    list-style: none; 
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+footer{
+    margin-bottom: 2em;
+   }
+
+#site-brand {
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
