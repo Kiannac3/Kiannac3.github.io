@@ -25,7 +25,8 @@ body {
   font-family: helvetica, verdana, sans-serif;
   font-size: 20px;
   background-image: url("/weather/images/rain.jpg");
-  background-size: 300px 100px;
+  background-repeat: no-repeat;
+  background-size: auto;
 }   
 
 h1 {
@@ -41,6 +42,7 @@ h2,h3,h4,h5,h6 {
     background-color: rgba(200,200,200,.6);
     margin: .2em auto;
     border: 1px solid;
+}    
 
 nav li { 
     display: inline-block; 
@@ -72,9 +74,9 @@ footer{
    box-shadow: 2px 2px 2px black;
   }
 
-.info {
+#info {
     width: 20em;
-    height: 25em;
+    height: 15em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
@@ -83,9 +85,9 @@ footer{
     justify-content: center;
 }
 
-.temps{
+#temps{
     width: 20em;
-    height: 25em;
+    height: 20em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
@@ -94,9 +96,9 @@ footer{
     justify-content: center;
  }
 
-.wind{
+#wind{
     width: 20em;
-    height: 25em;
+    height: 15em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
@@ -105,11 +107,11 @@ footer{
     justify-content: center;
 }
 
-.hourly{
+#hourly{
     display: inline-block;
     padding-left: 150px;
     width: 20em;
-    height: 25em;
+    height: 5em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
@@ -118,7 +120,12 @@ footer{
     justify-content: center;
 }
 
-
+.wind {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
 
 
 
