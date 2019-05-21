@@ -25,6 +25,7 @@ body {
   font-family: helvetica, verdana, sans-serif;
   font-size: 20px;
   background-image: url("/weather/images/rain.jpg");
+  background-size: 300px 100px;
 }   
 
 h1 {
@@ -40,11 +41,11 @@ h2,h3,h4,h5,h6 {
     background-color: rgba(200,200,200,.6);
     margin: .2em auto;
     border: 1px solid;
-    border-radius: 15px;
 
 nav li { 
     display: inline-block; 
     list-style: none; 
+    border-radius: 15px;
 }
 
 nav {
