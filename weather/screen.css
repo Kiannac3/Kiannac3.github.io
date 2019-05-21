@@ -21,12 +21,18 @@ html {
     box-sizing: inherit;
    }
 
-body{
+body {
   font-family: helvetica, verdana, sans-serif;
   font-size: 20px;
+  background-image: url("/weather/images/rain.jpg");
 }   
 
-h1,h2,h3,h4,h5,h6 {
+h1 {
+    background-color: blue;
+    font-family: helvetica, verdana, sans-serif;
+}
+
+h2,h3,h4,h5,h6 {
     font-family: sansita, Eurostyle, sans-serif;
   }
 
@@ -36,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
     border: 1px solid;
     border-radius: 15px;
 
-nav ul li { 
+nav li { 
     display: inline-block; 
     list-style: none; 
 }
@@ -55,6 +61,77 @@ footer{
     font-size: 2em;
     font-weight: 600;
   }
+#logo {
+    width: 150px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    border: 2px black solid;
+    border-radius: 3px;
+   box-shadow: 2px 2px 2px black;
+  }
+
+.info {
+    width: 20em;
+    height: 25em;
+    flex: 1 0 15em;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.temps{
+    width: 20em;
+    height: 25em;
+    flex: 1 0 15em;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    justify-content: center;
+ }
+
+.wind{
+    width: 20em;
+    height: 25em;
+    flex: 1 0 15em;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.hourly{
+    display: inline-block;
+    padding-left: 150px;
+    width: 20em;
+    height: 25em;
+    flex: 1 0 15em;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
