@@ -74,38 +74,31 @@ footer{
    box-shadow: 2px 2px 2px black;
   }
 
-#info {
-    width: 20em;
-    height: 15em;
-    flex: 1 0 15em;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 10px;
-    justify-content: center;
-}
-
 #temps{
     width: 20em;
-    height: 20em;
+    height: 10em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 15px;
     margin: 10px;
     justify-content: center;
+    position: relative;
+    text-align: center;
  }
 
 #wind{
     width: 20em;
-    height: 15em;
+    height: 17em;
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 15px;
     margin: 10px;
-    justify-content: center;
-}
+    justify-content: center;   
+    position: relative;
+    text-align: center;
+  }
 
 #hourly{
     display: inline-block;
@@ -118,6 +111,8 @@ footer{
     border-radius: 15px;
     margin: 10px;
     justify-content: center;
+    position: relative;
+    text-align: center;
 }
 
 .wind {
