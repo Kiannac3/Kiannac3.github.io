@@ -32,6 +32,8 @@ body {
 h1 {
     background-color: blue;
     font-family: helvetica, verdana, sans-serif;
+    height: 60px;
+    font-size: 50px;
 }
 
 h2,h3,h4,h5,h6 {
@@ -44,8 +46,14 @@ h2,h3,h4,h5,h6 {
     border: 1px solid;
 }    
 
-nav li { 
-    display: inline-block; 
+ul {
+  list-style-type: none;
+}
+
+ul nav li { 
+  list-style-type: none;
+    position: fixed;
+    display: inline; 
     list-style: none; 
     border-radius: 15px;
 }
@@ -60,18 +68,22 @@ footer{
     margin-bottom: 2em;
    }
 
+#ulinfo {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 #site-brand {
     font-size: 2em;
     font-weight: 600;
   }
 #logo {
-    width: 150px;
+    width: 60px;
+    float: left;
     position: relative;
-    top: 10px;
-    left: 10px;
-    border: 2px black solid;
+    border: 1px black solid;
     border-radius: 3px;
-   box-shadow: 2px 2px 2px black;
   }
 
 #temps{
@@ -113,6 +125,24 @@ footer{
     justify-content: center;
     position: relative;
     text-align: center;
+}
+
+#ultemps {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ulwind {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ulhourly {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .wind {
