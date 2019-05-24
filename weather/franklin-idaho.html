@@ -10,7 +10,7 @@
  <body>
     <header>
       <img id= "logo" src="/weather/images/logo.jpg" alt="weather site logo">
-    <h1> The Weather Site</h1> 
+    <h1 id="heading"> The Weather Site</h1> 
   </header>
   <nav>
       <ul>
@@ -21,38 +21,40 @@
       </ul>
   </nav>
   <main>
-    <section id= "info">
+    <section>
       <h2>Franklin, Idaho</h2>
-      <ul id="ulinfo">
-        <li><strong>Zip: </strong>83237 |</li>
-        <li><strong>Elevation: </strong>1514.246 m |</li>
+      <ul id="info">
+        <li><strong>Zip: </strong>83237|</li>
+        <li><strong>Elevation: </strong>1514.246 m|</li>
         <li><strong>Location: </strong>111.79, 42.07</li>
       </ul>
     </section> 
-    <section id="temps">
+    <section class ="sec" id="temps">
     <h3>Temperature</h3>
 
-    <ul id="ultemps">
+    <ul>
           <li>40 F</li>
             <li><strong>High: </strong>34 F</li> 
             <li><strong>Low: </strong>21 F</li> 
             <li><strong>Precipitation: </strong>0</li>
           </ul>
   </section>
-  <section id="wind">
+  <section class="sec">
    <h3>Wind</h3> 
    <img src="/weather/images/wind-pointer.png" alt="wind pointer">
-   <p class="wind">2 mph</p>
-   <ul id= "ulwind">
+   <p id="mps">2 mph</p>
+   <ul id= "wind">
      <li><strong>Wind: </strong>5</li>
      <li><strong>Direction: </strong>SW</li>
      <li><strong>Gust: </strong>10-12</li>
    </u>
   </section>
+  <section class="sec">
     <h3>Clear</h3>   
-  <section id="hourly">
+  </section>
+  <section class="sec" >
     <h3>Hourly Forecast</h3>
-      <ul id="ulhourly">
+      <ul id="hourly">
         <li>1:00am 41F</li>
         <li>2:00am 41F</li>
         <li>3:00am 41F</li>

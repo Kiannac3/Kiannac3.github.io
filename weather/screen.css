@@ -1,10 +1,15 @@
 /*Table of Contents
 1. Imports
-2. General Rules
+/*2. General Rules
+*..2a..navigation bar
+*..2b..current weather
+*..2c..wind styles
 3. Mobile Rules
+*..3a..Location Information
+*..3b..Weather Tiles
+*..3c..Hourly Temps
 4. Large Screen Rules
 
-*/
 
 /* 1.  Includes (fonts and supplementary stylesheets) */
 /*normalizing import*/
@@ -12,33 +17,46 @@
 /*Google Font import*/
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
-/*General Styles*/
-html {
+
+
+
+/*2. General Rules*/
+h1,h2,h3,h4,h5,h6 {
+    font-family: Sansita, sans-serif;
+  }
+
+
+
+
+
+
+
+  *, :before, :after {
     box-sizing: border-box;
-   }
-   
-   *, *:before, *:after{
-    box-sizing: inherit;
-   }
+    margin: 0;
+    padding: 0;
+}
 
 body {
   font-family: helvetica, verdana, sans-serif;
   font-size: 20px;
+  background-size: auto;
   background-image: url("/weather/images/rain.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
-}   
+}  
 
-h1 {
+html {
+    box-sizing: border-box;
+   }
+
+
+#heading {
     background-color: blue;
     font-family: helvetica, verdana, sans-serif;
     height: 60px;
-    font-size: 50px;
+    width: 10em;
+    font-size: 40px;
 }
-
-h2,h3,h4,h5,h6 {
-    font-family: sansita, Eurostyle, sans-serif;
-  }
 
 .tile{
     background-color: rgba(200,200,200,.6);
@@ -49,20 +67,26 @@ h2,h3,h4,h5,h6 {
 ul {
   list-style-type: none;
 }
-
-ul nav li { 
+nav { 
+  position: relative;
+  margin-bottom: 0.5em;
+  top: 0.5em;
+}      
+nav a {
+  text-decoration:none;
+  line-height: 10px;
+  padding: 5px, 5px;
+}
+nav li {
   list-style-type: none;
-    position: fixed;
-    display: inline; 
-    list-style: none; 
-    border-radius: 15px;
+  font-size: 20px;
+  display: inline-block;
+  padding-left: 7px;
+}
+nav ul {
+  margin: 0;
 }
 
-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
   
 footer{
     margin-bottom: 2em;
@@ -86,74 +110,44 @@ footer{
     border-radius: 3px;
   }
 
-#temps{
-    width: 20em;
-    height: 10em;
+section.sec {
     flex: 1 0 15em;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 15px;
     margin: 10px;
     justify-content: center;
-    position: relative;
+    width: 20em;
     text-align: center;
  }
 
-#wind{
-    width: 20em;
-    height: 17em;
-    flex: 1 0 15em;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 10px;
-    justify-content: center;   
-    position: relative;
-    text-align: center;
-  }
-
-#hourly{
-    display: inline-block;
-    padding-left: 150px;
-    width: 20em;
-    height: 5em;
-    flex: 1 0 15em;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 10px;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-}
-
-#ultemps {
+#temps {
+  height: 10em;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-#ulwind {
+#wind {
+  height: 10em;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  position: absolute;
 }
 
-#ulhourly {
+#hourly {
+  display: inline-block;
+  height: 5em;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-.wind {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  
+#mph {
+  height: 3em;
 }
 
-
-
+#info li {
+  list-style-type: none;
+  font-size: 14px;
+  display: inline-block;
+  padding-left: 7px;
+}
 
 
 
