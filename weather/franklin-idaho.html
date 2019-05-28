@@ -8,52 +8,50 @@
   <link rel="stylesheet" type="text/css" href="/weather/screen.css" media="screen">
  </head>
  <body>
-    <header>
+    <header id= "header">
       <img id= "logo" src="/weather/images/logo.jpg" alt="weather site logo">
-    <h1 id="heading"> The Weather Site</h1> 
+    <h1 id="sitename"> The Weather Site</h1> 
   </header>
-  <nav>
-      <ul>
-          <li><a href="current.html">Current</a></li>
-          <li><a href="search.html">Search</a></li>
-          <li><a href="franklin.html">Franklin</a></li>
-          <li><a href="greenville.html">Greenville</a></li>
-      </ul>
-  </nav>
-  <main>
-    <section>
-      <h2>Franklin, Idaho</h2>
-      <ul id="info">
-        <li><strong>Zip: </strong>83237|</li>
-        <li><strong>Elevation: </strong>1514.246 m|</li>
-        <li><strong>Location: </strong>111.79, 42.07</li>
-      </ul>
-    </section> 
-    <section class ="sec" id="temps">
-    <h3>Temperature</h3>
 
-    <ul>
-          <li>40 F</li>
-            <li><strong>High: </strong>34 F</li> 
-            <li><strong>Low: </strong>21 F</li> 
-            <li><strong>Precipitation: </strong>0</li>
-          </ul>
-  </section>
-  <section class="sec">
-   <h3>Wind</h3> 
-   <img src="/weather/images/wind-pointer.png" alt="wind pointer">
-   <p id="mps">2 mph</p>
-   <ul id= "wind">
-     <li><strong>Wind: </strong>5</li>
-     <li><strong>Direction: </strong>SW</li>
-     <li><strong>Gust: </strong>10-12</li>
-   </u>
-  </section>
-  <section class="sec">
-    <h3>Clear</h3>   
-  </section>
-  <section class="sec" >
-    <h3>Hourly Forecast</h3>
+  <main>
+    <section id="title">
+        <h1 id="town">Franklin, Idaho</h1>
+        <ul id="info">
+            <li><strong>Zip:</strong> 83237 |</li>
+            <li><strong>Elevation:</strong> 1514.246 m |</li>
+            <li><strong>Location:</strong> 111.79, 42.07</li>
+        </ul>
+    </section>
+
+    <div class="background">
+
+        <section class="sec">
+
+                <h2>Temperature</h2>
+                <h3 id="temperature">40&deg;F</h3>
+                <ul id="temp">
+                    <li id="high">64&deg;F</li>
+                    <li id="low">41&deg;F</li>
+                </ul>
+                <span>Feels like ??&deg;F</span>
+        </section>
+            <section class="sec">
+                <h2>Wind</h2>
+                <div id="windspeed"><img src="/weather/images/wind-pointer.png" alt="wind dial">
+                <h3 id="wind">5 mph</h3></div>
+                <ul>
+                    <li><strong>Direction:</strong> SW</li>
+                    <li><strong>Gusts:</strong> 10-12 mph</li>
+                </ul>
+            </section>
+            <section class="sec">
+                <h2>Rain</h2>
+                <img src="/weather/images/rain.jpg" alt="rain photo" id="rainimg">
+                <p><strong>Precipitation:</strong> 0</p>
+        </section>
+
+  <section id="forecast" >
+    <h2>Hourly Forecast</h2>
       <ul id="hourly">
         <li>1:00am 41F</li>
         <li>2:00am 41F</li>
@@ -70,9 +68,19 @@
         <li>1:00pm 55F</li>
       </ul>
   </section>
+  
+  </div>
   </main>
- <footer>
+ <footer id="footer">
    &copy;2019 Kianna Baird
   </footer>
+<nav>
+      <ul>
+          <li><a href="current.html">Current</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="franklin.html">Franklin</a></li>
+          <li><a href="greenville.html">Greenville</a></li>
+      </ul>
+  </nav>
     </body>
 </html>
