@@ -38,10 +38,6 @@ body {
   font-size: 20px;
 }  
 
-html {
-    box-sizing: border-box;
-   }
-
 nav {
   background-color:#1E90FF;
   height: 60px;
@@ -71,6 +67,7 @@ li {
 
 #footer {
   background-color: #1E90FF;
+  height: 50px;
 }
 
 #high {
@@ -92,6 +89,10 @@ li {
   display: block;
 }
 
+#info {
+  font-size: 15px;
+}
+
 a:link, a:visited {
   color: #fff;
   text-decoration: none;
@@ -102,15 +103,13 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
 #nav li {
   padding: 0 10px;
   white-space: nowrap;
 }
 
 #nav {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 #sitename {
@@ -145,7 +144,6 @@ a:hover {
   margin-top: 5px;
   text-align: center;
 }
-
 
 #hourly {
   white-space: nowrap;
