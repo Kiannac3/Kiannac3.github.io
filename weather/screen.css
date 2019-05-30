@@ -38,21 +38,6 @@ body {
   font-size: 20px;
 }  
 
-nav {
-  background-color:#1E90FF;
-  height: 60px;
-  color: white;
-  text-align: center;
-  padding-top: 10px;
-}
-
-ul {
-  padding-left: 0;
-}
-li {
-  display: inline;
-}
-
 #header {
   height: 50px;
   background-color: #1E90FF;
@@ -70,27 +55,33 @@ li {
   height: 50px;
 }
 
-#high {
-  color: red;
+ul {
+  padding-left: 0;
 }
 
-#low {
-  color: blue;
+li {
+  display: inline;
 }
 
 .background {
   background-image: url(/weather/images/rain.jpg);
 }
-#temperature {
-  font-size: 3em;
+
+#sitename {
+  display: inline;
 }
 
-#temp {
-  display: block;
-}
+/*2a. Navigation*/
 
-#info {
-  font-size: 15px;
+nav {
+  position: fixed;
+  bottom: 0;
+  background-color:#1E90FF;
+  height: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
 }
 
 a:link, a:visited {
@@ -103,9 +94,27 @@ a:hover {
   text-decoration: underline;
 }
 
-#sitename {
-  display: inline;
+
+
+/*2b. Current Weather*/
+
+#temperature {
+  font-size: 3em;
 }
+
+#temp {
+  display: block;
+}
+
+#high {
+  color: red;
+}
+
+#low {
+  color: blue;
+}
+
+/*2c. Wind Styles*/
 
 #wind {
   position: absolute;
@@ -121,29 +130,7 @@ a:hover {
 
 
 
-#forecast {
-  border:black solid;
-  border-radius: 20px;
-  background-color: lightgray;
-  height: 110px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-#hourly {
-  white-space: nowrap;
-  overflow: auto;
-}
-
-#rainimg {
-  position: absolute;
-  width: 200px;
-}
-
-
-
 /* 3. Mobile Rules */
-
 
 #nav li {
   padding: 0 10px;
@@ -161,6 +148,38 @@ a:hover {
   text-align: center;
   margin-top: 3px;
 }
+
+/*3a. Location Info*/
+
+#info {
+  font-size: 15px;
+}
+
+/*3b. Weather Tiles*/
+
+
+
+/*3c. Hourly Forecast*/
+
+#forecast {
+  border:black solid;
+  border-radius: 20px;
+  background-color: lightgray;
+  height: 110px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#hourly {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+#rainimg {
+  position: center;
+  width: 200px;
+}
+
 
 /* 4. Large Screen Rules */
 
