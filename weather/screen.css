@@ -69,22 +69,27 @@ li {
 
 #sitename {
   display: inline;
+  padding: -15px;
 }
 
 /*2a. Navigation*/
 
 nav {
-  position: fixed;
-  bottom: 0;
   background-color:#1E90FF;
-  height: 60px;
-  color: white;
-  text-align: center;
-  padding-top: 10px;
+  height: 45px;
   width: 100%;
+  padding: .50em;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 
-a:link, a:visited {
+#nav li {
+ white-space: nowrap;
+ color: #fff;
+ padding-top: 15px;
+}
+
+a:link, a:visited  {
   color: #fff;
   text-decoration: none;
 }
@@ -93,8 +98,6 @@ a:hover {
   color:#fff;
   text-decoration: underline;
 }
-
-
 
 /*2b. Current Weather*/
 
@@ -129,17 +132,7 @@ a:hover {
 }
 
 
-
 /* 3. Mobile Rules */
-
-#nav li {
-  padding: 0 10px;
-  white-space: nowrap;
-}
-
-#nav {
-  padding-top: 10px;
-}
 
 .sec {
   border-radius: 20px;
@@ -170,21 +163,44 @@ a:hover {
   text-align: center;
 }
 
-#hourly {
+#scroll {
   white-space: nowrap;
   overflow: auto;
 }
 
 #rainimg {
   width: 200px;
+  padding-bottom: 30px;
 }
 
 
-/* 4. Large Screen Rules */
+/* 4. Large Screen Rules
 
+/* Moves Navbar to the top of screen */
 
-
-
+@media only screen and (min-width: 1025px) {
+  
+  #navbar {
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+}
+  /* shifts content down 50 pixels */
+  main {
+          margin-top:50px;
+  }
+  /* lines containers in a row */
+  .background {
+          display:flex;
+          justify-content:center;
+  }
+  .sec {
+          width: 100%;
+          margin:2px;
+  
+  }
+  }
 
 
 
