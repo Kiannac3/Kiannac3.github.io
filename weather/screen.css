@@ -38,6 +38,10 @@ body {
   font-size: 20px;
 }  
 
+body>div {
+  width: 100vw;
+}
+
 #header {
   height: 50px;
   background-color: #1E90FF;
@@ -185,21 +189,27 @@ a:hover {
     text-align: center;
     display: flex;
 }
-  /* shifts content down 50 pixels */
+  
   main {
-          margin-top:50px;
+      margin-top:50px;
   }
-  /* lines containers in a row */
+  
   .background {
-          display:flex;
-          justify-content:center;
+      display:flex;
+      justify-content:center;
   }
   .sec {
-          width: 100%;
-          margin:2px;
+      width: 100%;
+      margin:2px;
+  }
+
+  body>div {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1500px;
+  }
   
-  }
-  }
+}
 
 
 
