@@ -50,8 +50,11 @@ h1 {
 /*	Background Images - use with Small screens */
 
 .page-header {
-	background-image: url(/responsive_media/images/banner-400.jpg)
+	background-image: url(..responsive_media/images/banner-400.jpg), url(..responsive_media/images/logo-50.png);
+	background-repeat: no-repeat;
+	background-position: right, center;
 }
+
 
 
 /*******************************
