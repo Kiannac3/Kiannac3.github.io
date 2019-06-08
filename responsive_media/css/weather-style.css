@@ -1,160 +1,24 @@
-@media only screen and (min-width: 800px)
-{
-  
- li > #clouddim {
-    visibility: hidden;
-    position: relative;
-    }
 
-li > #clouddim:after{
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: "768 x 480";
+
+.short-text {
+    display: inline-block;
 }
 
-li > #cloudweight {
-    visibility: hidden;
-    position: relative;  
- }
-
-li > #cloudweight:after{
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: "66.9kb";
+.full-text {
+    display: none;
 }
 
-li#raindim {
-visibility: hidden;
-position: relative;
+/* When resolution <= 1200px, hide short text and show full text
+@media (max-width: 1200px) {
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+}*/
+@media (max-width: 800px) {
+.short-text {
+    display: none;
+}
+.full-text {
+    display: inline-block;
 }
 
-#raindim:after{
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "768 x 512";
 }
-
-#rainweight {
-visibility: hidden;
-position: relative;  
-}
-
-#rainweight:after {
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "21.3kb";
-}
-
-#cleardim {
-visibility: hidden;
-position: relative;
-}
-
-#cleardim:after {
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "500 x 313";
-}
-li > #clearweight
-{
-visibility: hidden;
-position: relative;  
-}
-li > #clearweight:after{
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "30 kb";
-}
-
-li > #snowdim
-{
-visibility: hidden;
-position: relative;
-}
-
-li > #snowdim:before {
-visibility: visible;
-/* position: absolute; */
-top: 0;
-right: 0;
-content: "768 x 1152";
-}
-li > #snowweight
-{
-visibility: hidden;
-position: relative;
-padding-right: 20px;  
-}
-li > #snowweight:after{
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "96.6kb";
-}
-
-li > #dimenF
-{
-visibility: hidden;
-position: relative;
-}
-
-li > #dimenF:after{
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "768 x 432";
-}
-li > #weightF
-{
-visibility: hidden;
-position: relative;  
-}
-li > #weightF:after{
-visibility: visible;
-position: absolute;
-top: 0;
-right: 0;
-content: "7.42kb";
-}
-}
-
-li {
-    font-size: 1.2em;
-}
-
-
-
-
-/*  
-<li>Image Name: clear-500.jpg</li>
-<li><span id="clouddim"> Image Dimensions: 500 x 500 </span></li>
-<li><span id="cloudweight">Image weight: 27.3 kb</span> </li>
-
-<li>Image Name: rain-500.jpg</li>
-<li id="raindim"> Image Dimensions: 500 x 333</li>
-<li id="rainweight">Image Weight: 12.2 kb</li>
-
-<section id="snow" class = "small">
-  <ul class="info">
-<li>Image Name: snow-500.jpg</li>
-<li id="snowdim">Image Dimensions: 500 x 750</li>
-<li id="snowweight">Image weight: 50.6 kb</li>
-
-<li>Image Name: fog-1000.jpg</li>
-<li> id="fogdim"> Image Dimensions: 500 x 281</li>
-<li id="fogweight">Image weight: 5.3 kb</li>
-*/
