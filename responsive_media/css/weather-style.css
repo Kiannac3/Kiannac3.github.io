@@ -13,7 +13,7 @@
     .short-text { display: inline-block; }
     .full-text { display: none; }
 }*/
-@media (max-width: 800px) {
+@media (min-width: 800px) {
 .short-text {
     display: none;
 }
