@@ -1,0 +1,137 @@
+@media only screen and (min-width: 800px)
+{
+  
+ li > #clouddim {
+    visibility: hidden;
+    position: relative;
+    }
+
+li > #clouddim:after{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "768 x 480";
+}
+
+li > #cloudweight {
+    visibility: hidden;
+    position: relative;  
+ }
+
+li > #cloudweight:after{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "66.9kb";
+}
+
+li#raindim {
+visibility: hidden;
+position: relative;
+}
+
+#raindim:after{
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "768 x 512";
+}
+
+#rainweight {
+visibility: hidden;
+position: relative;  
+}
+
+#rainweight:after {
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "21.3kb";
+}
+
+#cleardim {
+visibility: hidden;
+position: relative;
+}
+
+#cleardim:after {
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "768 x 768";
+}
+li > #clearnweight
+{
+visibility: hidden;
+position: relative;  
+}
+li > #clearnweight:after{
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "49.2kb";
+}
+
+li > #snowdim
+{
+visibility: hidden;
+position: relative;
+}
+
+li > #snowdim:before {
+visibility: visible;
+/* position: absolute; */
+top: 0;
+right: 0;
+content: "768 x 1152";
+}
+li > #snowweight
+{
+visibility: hidden;
+position: relative;
+padding-right: 20px;  
+}
+li > #snowweight:after{
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "96.6kb";
+}
+
+li > #dimenF
+{
+visibility: hidden;
+position: relative;
+}
+
+li > #dimenF:after{
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "768 x 432";
+}
+li > #weightF
+{
+visibility: hidden;
+position: relative;  
+}
+li > #weightF:after{
+visibility: visible;
+position: absolute;
+top: 0;
+right: 0;
+content: "7.42kb";
+}
+}
+
+li {
+    font-size: 1.2em;
+}
