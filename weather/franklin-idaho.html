@@ -38,8 +38,11 @@
         </section>
             <section class="sec">
                 <h2>Wind</h2>
-                <div id="windspeed"><img src="/weather/images/wind-pointer.png" alt="wind dial">
-                <h3 id="wind">5 mph</h3></div>
+                <picture>
+                    <source media="(min-width:700px)" srcset="/weather-images/wind-pointer.png">
+                      <img src="/weather-images/sind-pointer-50.png" alt="wind dial">
+                      </picture>
+                <h3 id="wind">5 mph</h3>
                 <ul id="direction">
                     <li><strong>Direction:</strong> SW</li>
                     <li><strong>Gusts:</strong> 10-12 mph</li>
