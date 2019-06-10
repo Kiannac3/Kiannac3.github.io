@@ -50,9 +50,10 @@ h1 {
 /*	Background Images - use with Small screens */
 
 .page-header {
-	background-image: url(/weather-images/nps-logo-50.png), url(images/banner-400.jpg);
+	background-image: url("../weather-images/nps-logo-50.png"), url("..images/banner-400.jpg");
+	background-position: right;
 	background-repeat: no-repeat, no-repeat;
-	background-position: left;
+	background-size: contain ,cover;
 }
 
 
