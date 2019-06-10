@@ -1,10 +1,6 @@
 
 
-.short-text {
-    display: inline-block;
-}
-
-.full-text {
+.big {
     display: none;
 }
 
@@ -13,12 +9,11 @@
     .short-text { display: inline-block; }
     .full-text { display: none; }
 }*/
-@media (min-width: 800px) {
-.short-text {
+@media screen and (min-width: 800px) {
+.small {
     display: none;
 }
-.full-text {
-    display: inline-block;
+.big {
+    display: block;
 }
-
 }
