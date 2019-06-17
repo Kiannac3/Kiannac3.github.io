@@ -211,12 +211,13 @@ a:hover {
   overflow: auto;
 }
 
-#rainimg {
-  width: 200px;
-  padding-bottom: 30px;
-}
-
 /* background image change rules */
+
+#conditionimage {
+  height:50%;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
 
 .rain {
   background-image: url("/weather-images/rain-150.jpg");
@@ -239,6 +240,12 @@ a:hover {
   background-size: cover;
 }
 
+#imagesummary {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 361px;
+}
 
 /* 4. Large Screen Rules
 

@@ -6,7 +6,7 @@
   <meta name="description" content="Information pertaining to the weather in Franklin, Idaho.">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="/weather/screen.css" media="screen">
-  <script src="javascript/weather.js"></script>
+  
  </head>
  <body>
    <div>
@@ -27,7 +27,7 @@
         <h1 id="town">Franklin, Idaho</h1>
         <ul id="info">
             <li><strong>Zip:</strong> 83237 |</li>
-            <li id="elevation"><strong>Elevation:</strong> 1514.246 m |</li>
+            <li><strong>Elevation:</strong> <span id="elevation">1514.246</span> ft |</li>
             <li><strong>Location:</strong> 111.79, 42.07</li>
         </ul> <br>
     </section>
@@ -41,7 +41,7 @@
                 <ul id="temp">
                     <li id="high">64&deg;F</li>
                     <li id="low">41&deg;F</li>
-                </ul><br>
+                </ul>
                 <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
         </section>
 
@@ -55,10 +55,9 @@
                 </ul>
             </section>
             <section class="sec">
-                <h2>Rain</h2>
-                <img src="/weather/images/rain.jpg" alt="rain photo" id="rainimg">
-                <p><strong>Precipitation:</strong> 0</p>
-        </section>
+            <h2><span id="summary">Fog</span></h2>
+                <div id="imagesummary"><span><img/></span></div>              
+            </section>
 
 </div>
   <section id="forecast" >
@@ -85,8 +84,7 @@
  <footer>
    &copy;2019 Kianna Baird
   </footer>
-
-  <script src="javascript/weather.js"></script>
+<script src="/weather/javascript/weather.js"></script>
 </div>
     </body>
 </html>

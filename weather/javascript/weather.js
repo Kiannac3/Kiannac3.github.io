@@ -1,14 +1,3 @@
-// Weather Site Javascript Functions
-
-
-// Javascript test 
-
-console.log('My javascript is being read.');
-
-
-
-// WIND CHILL FUNCTION  
-
 // let speed = document.getElementById('currWind');
 // let temp = document.getElementById('currTemp');
 
@@ -18,7 +7,7 @@ const speed = 5;
 // console.log(`speed is ${speed}`);
 // console.log(`temp is ${temp}`);
 
-buildWC(speed, temp)
+buildWC(speed, temp);
 // Calculate the Windchill
 function buildWC(speed, temp) {
     const feelTemp = document.getElementById('feelTemp');
@@ -40,140 +29,121 @@ function buildWC(speed, temp) {
     }
 
 
-// Gathers Data to calculate wind chill
-  
-  let temp = parseFloat(document.getElementById('tempnow').innerHTML);
-  let speed = parseFloat(document.getElementById('windspeed').innerHTML);
+// wind dial turning function
 
-// Calls the function
+// const direction = "NNE"; //Set your own value
+// windDial(direction);
 
-  buildWC(speed, temp);
-
-
-
-
-  // Wind Dial Function
+// Wind Dial Function
 function windDial(direction){
-
-
     // Get the wind dial container
-        
-        const dial = document.getElementById("dial");
-
-    // Determine the dial class
-        switch (direction){
-        case "North":
-        case "N":
-        dial.setAttribute("class", "n"); //"n" is the CSS rule selector
-        break;
-        case "NE":
-        case "NNE":
-        case "ENE":
-        dial.setAttribute("class", "ne");
-        break;
-        case "NW":
-        case "NNW":
-        case "WNW":
-        dial.setAttribute("class", "nw");
-        break;
-        case "South":
-        case "S":
-        dial.setAttribute("class", "s");
-        break;
-        case "SE":
-        case "SSE":
-        case "ESE":
-        dial.setAttribute("class", "se");
-        break;
-        case "SW":
-        case "SSW":
-        case "WSW":
-        dial.setAttribute("class", "sw");
-        break;
-        case "East":
-        case "E":
-        dial.setAttribute("class", "e");
-        break;
-        case "West":
-        case "W":
-        dial.setAttribute("class", "w");
-        break;
-   }
+    const dial = document.getElementById("dial");
+     // Determine the dial class
+ switch (direction){
+    case "North":
+    case "N":
+     dial.setAttribute("class", "n"); //"n" is the CSS rule selector
+     break;
+    case "NE":
+    case "NNE":
+    case "ENE":
+     dial.setAttribute("class", "ne");
+     break;
+    case "NW":
+    case "NNW":
+    case "WNW":
+     dial.setAttribute("class", "nw");
+     break;
+    case "South":
+    case "S":
+     dial.setAttribute("class", "s");
+     break;
+    case "SE":
+    case "SSE":
+    case "ESE":
+     dial.setAttribute("class", "se");
+     break;
+    case "SW":
+    case "SSW":
+    case "WSW":
+     dial.setAttribute("class", "sw");
+     break;
+    case "East":
+    case "E":
+     dial.setAttribute("class", "e");
+     break;
+    case "West":
+    case "W":
+     dial.setAttribute("class", "w");
+     break;
+ }
 }
 
-
-// Gathers Information for windDial Function
-
-  let direction = document.getElementById('wdirection').innerHTML;
-
-
-// Calls windDial Function
-
-  windDial(direction);
-
-
-
-// Background Image Change Function
-let condition = document.getElementById("sky").innerHTML;
-let lower = condition.toLowerCase();
-let c = lower.includes("clear");
-let cloud = lower.includes("cloudy");
-let f = lower.includes("foggy");
-let r = lower.includes("rain");
-let s = lower.includes("snowing");
-
-getCondition(c, cloud, f, r, s);
-function getCondition(c, cloud, f, r , s) {
-      if (c == true){
-        return "clear";
-      }
-      if (cloud == true){
-        return "cloud";
-      }
-      if (f == true) {
-        return "fog";
-      }
-      if (r == true) {
-        return "rain";
-      }
-      if (s == true) {
-        return "snow";
-      
-}
-}
-
- 
-
-
-let weather = getCondition(c, cloud, f , r ,s);
-
-
+//Call functions
+const weatherCondition = "rain"; //Set your own value
+let weather = getCondition(weatherCondition);
 changeSummaryImage(weather);
 
-function changeSummaryImage(weather) {
-         
-  const threecontainer = document.getElementById("threecontainer");
-  const weatherinfoimage = document.getElementById("weatherinfoimage");
-          if (weather == "clear") {
-              threecontainer.setAttribute("class", "clear");
-              weatherinfoimage.setAttribute("class", "clear");
-          }
-          if (weather == "cloud") {
-            threecontainer.setAttribute("class", "cloud");
-            weatherinfoimage.setAttribute("class", "cloud");
-          }
-          if (weather == "fog") {
-            threecontainer.setAttribute("class", "fog");
-            weatherinfoimage.setAttribute("class", "fog");
-          }
-          if (weather == "rain") {
-            threecontainer.setAttribute("class", "rain");
-            weatherinfoimage.setAttribute("class", "rain");
-          }
-          if (weather == "snow") {
-            threecontainer.setAttribute("class", "snow");
-            weatherinfoimage.setAttribute("class", "snow");
-          }
 
-         
+//Determine what the value is.
+function getCondition(weatherCondition){
+    if (weatherCondition.includes ("clear") || weatherCondition.includes("sunny")) {
+        return "clear";
+    }
+    else if (weatherCondition.includes("rain")){
+        return "rain";
+    }
+    else if (weatherCondition.includes("wind")){
+        return "wind";
+    }
+    else if (weatherCondition.includes("fog")){
+        return "fog";
+    }
+    else {
+        return "snow";
+    }
 }
+
+//Change class according to the value
+function changeSummaryImage(weatherCondition){
+    const largeframe = document.getElementById("largeframe");
+console.log(weatherCondition);
+    switch(weatherCondition){
+        case "clear":
+        largeframe.setAttribute("class", "clear");
+        break;
+        case "rain":
+        largeframe.setAttribute("class", "rain");
+        break;
+        case "wind":
+        largeframe.setAttribute("class", "wind");
+        break;
+        case  "fog":
+        largeframe.setAttribute("class", "fog");
+        break;
+        case "snow":
+        largeframe.setAttribute("class", "snow");
+        break;
+
+    }
+}
+
+
+    // Convert meters to feet
+
+    // let meters = document.getElementById('meters');
+    let meters = 1514.246;
+    let feet = meterstoFeet(meters);
+    let elevation = document.getElementById("elevation");
+    elevation.innerHTML = feet;
+
+    function meterstoFeet(meters){
+        //calculate meters to feet
+        let f = meters * 0.3048;
+        console.log(f);
+        // round to nearest integer
+        f = Math.floor(f);
+        return f;
+    }
+
+    
