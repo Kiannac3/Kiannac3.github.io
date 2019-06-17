@@ -77,13 +77,19 @@ li {
 
 /*2a. Navigation*/
 
+#nav{
+  display:flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;  
+}
+
 nav {
+  position: fixed;
   background-color:#1E90FF;
   height: 45px;
   width: 100%;
-  padding: .50em;
-  display: inline-flex;
-  justify-content: space-evenly;
+  bottom: 0px;
+  z-index: 100;
 }
 
 #nav li {
@@ -134,6 +140,40 @@ a:hover {
   position: relative;
 }
 
+#dial {
+  height: 150px;
+  width: 150px;
+  background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+  z-index: 100;
+  margin: -.6em auto 0;
+ }
+
+/* 2d. Rotation Rules */
+
+.n {
+  transform: rotate(0deg);
+}
+.ne {
+  transform: rotate(45deg);
+}
+.e {
+  transform: rotate(90deg);
+}
+.se {
+  transform: rotate(135deg);
+}
+.s {
+  transform: rotate(180deg);
+}
+.sw {
+  transform: rotate(225deg);
+}
+.w {
+  transform: rotate(270deg);
+}
+.nw {
+  transform: rotate(315deg);
+}
 
 /* 3. Mobile Rules */
 
@@ -176,6 +216,29 @@ a:hover {
   padding-bottom: 30px;
 }
 
+/* background image change rules */
+
+.rain {
+  background-image: url("/weather-images/rain-150.jpg");
+  background-size: cover;
+}
+.cloud {
+  background-image: url("/weather-images/clouds-150.jpg");
+  background-size: cover;
+}
+.fog  {
+  background-image: url("/weather-images/fog-150.jpg");
+  background-size: cover;
+}
+.clear {
+  background-image: url("/weather-images/clear-150.jpg");
+  background-size: cover;
+}
+.snow {
+  background-image: url("/weather-images/snow-150.jpg");
+  background-size: cover;
+}
+
 
 /* 4. Large Screen Rules
 
@@ -183,13 +246,16 @@ a:hover {
 
 @media only screen and (min-width: 900px) {
   
-  #navbar {
-    justify-content: center;
-    padding: 5px;
-    text-align: center;
-    display: flex;
-}
-  
+  nav{
+    position: relative;
+  }
+
+#nav {
+    padding-bottom: 0px;
+    padding-top: 30px;
+    margin-top:0px;
+ }
+
   main {
       margin-top:50px;
   }
@@ -209,6 +275,29 @@ a:hover {
     max-width: 1500px;
   }
   
+/* background image change rules */
+
+.rain {
+  background-image: url("/weather-images/rain-500.jpg");
+  background-size: cover;
+}
+.cloud {
+  background-image: url("/weather-images/clouds-500.jpg");
+  background-size: cover;
+}
+.fog  {
+  background-image: url("/weather-images/fog-500.jpg");
+  background-size: cover;
+}
+.clear {
+  background-image: url("/weather-images/clear-500.jpg");
+  background-size: cover;
+}
+.snow {
+  background-image: url("/weather-images/snow-500.jpg");
+  background-size: cover;
+}
+
 }
 
 
