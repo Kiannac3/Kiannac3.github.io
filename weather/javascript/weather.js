@@ -1,5 +1,5 @@
-// let speed = document.getElementById('currWind');
-// let temp = document.getElementById('currTemp');
+console.log('My javascript is being read.');
+
 
 const temp = 31;
 const speed = 5;
