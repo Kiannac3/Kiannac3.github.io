@@ -218,19 +218,23 @@ a:hover {
   width: 50%;
   display: block;
   margin: 0 auto;
+}
 
 .rain {
   background-image: url("/weather-images/rain-150.jpg");
   background-size: cover;
 }
+
 .cloud {
   background-image: url("/weather-images/clouds-150.jpg");
   background-size: cover;
 }
+
 .fog  {
   background-image: url("/weather-images/fog-150.jpg");
   background-size: cover;
 }
+
 .clear {
   background-image: url("/weather-images/clear-150.jpg");
   background-size: cover;
