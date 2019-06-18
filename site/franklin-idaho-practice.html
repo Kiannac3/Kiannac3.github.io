@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-us">
+ <head>
+  <meta charset="UTF-8">
+  <title>Franklin, ID | The Weather Site | zip, elevation, location, temperature</title>
+  <meta name="description" content="Information pertaining to the weather in Franklin, Idaho.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/weather/screen.css" media="screen">
+  
+ </head>
+ <body>
+   <div>
+    <header id= "header">
+      <img id= "logo" src="/weather/images/logo.png" alt="weather site logo">
+    <h1 id="sitename"> The Weather Site</h1> 
+  </header>
+<nav>
+      <ul id="nav">
+          <li><a href="current.html"> Current </a></li>
+          <li><a href="search.html"> Search </a></li>
+          <li><a href="franklin-idaho.html"> Franklin </a></li>
+          <li><a href="greenville-idaho.html"> Greenville </a></li>
+      </ul>
+  </nav>
+  <main>
+    <section id="title">
+        <h1 id="town">Franklin, Idaho</h1>
+        <ul id="info">
+            <li><strong>Zip:</strong> 83237 |</li>
+            <li><strong>Elevation:</strong> <span id='elevationNum'>1514.246</span> |</li>
+            <li><strong>Location:</strong> 111.79, 42.07</li>
+        </ul> <br>
+    </section>
+
+    <div class="background">
+
+        <section class="sec">
+
+                <h2>Temperature</h2>
+                <h3 id="temperature">40&deg;F</h3><br>
+                <ul id="temp">
+                    <li id="high">64&deg;F</li>
+                    <li id="low">41&deg;F</li>
+                </ul>
+                <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
+        </section>
+
+            <section class="sec">
+                <h2>Wind</h2>
+                <div id="windspeed"><div id ="dial" class="sw"></div>
+                <h3 id="wind">5 mph</h3></div>
+                <ul id="direction">
+                    <li><strong>Direction:</strong> SW</li>
+                    <li><strong>Gusts:</strong> 10-12 mph</li>
+                </ul>
+            </section>
+            <section class="sec" id="summary">
+                <h2>Clear</h2>
+                <img src="/weather-images/clear-500.jpg" alt="weather description image" id="weatherimg">
+                <p><strong>Precipitation:</strong> 0</p>
+        </section>
+
+</div>
+  <section id="forecast" >
+    <h3>Hourly Forecast</h3>
+      <ul id="scroll">
+        <li>1:00am 41F</li>
+        <li>2:00am 41F</li>
+        <li>3:00am 41F</li>
+        <li>4:00am 41F</li>
+        <li>5:00am 41F</li>
+        <li>6:00am 41F</li>
+        <li>7:00am 42F</li>
+        <li>8:00am 44F</li>
+        <li>9:00am 44F</li>
+        <li>10:00am 46F</li>
+        <li>11:00am 49F</li>
+        <li>12:00pm 51F</li>
+        <li>1:00pm 55F</li>
+      </ul>
+  </section>
+  
+  
+  </main>
+ <footer>
+   &copy;2019 Kianna Baird
+  </footer>
+<script src="/weather/javascript/weather.js"></script>
+</div>
+    </body>
+</html>

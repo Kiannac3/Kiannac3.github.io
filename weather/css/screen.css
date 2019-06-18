@@ -1,0 +1,366 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Tiffany Berg
+*
+/* 1.  Includes (fonts and supplementary stylesheets) 
+     1.1 Normalize Import */
+     @import url('normalize.css');    
+     /*   1.2 Google Font Import */    
+             @import url('https://fonts.googleapis.com/css?family=Sansita');
+     /*
+     *  2.  Mobile First (styles specific to small screens)
+     *
+     *  3.  General Styles (for all pages and devices)
+     *
+     *  4.  Large Screen Styles (Media Queries begin here)
+     *
+     * ****************************** */
+     
+     /*Mobile First (styles specific to small screens)*/
+     #page-nav{
+         position:fixed;
+         bottom:0;
+         /* left:0; */
+         width: 100vw; 
+         font-size: 4vw;
+         background-color:#1E90FF;
+     }
+     
+     #temperature h2, #wind h2 {
+         display:none;
+     }
+     
+     #hourlyForecast ul {
+         display: flex;
+         flex-wrap: nowrap;
+         overflow-x:scroll;
+         align-items: center;
+         list-style:none;
+         padding: .25em;
+         margin: .25em 0;
+         height: 55px;
+     }
+     
+     #hourlyForecast ul li {
+         flex:0 0 auto;
+         padding: 0 .25em;
+     }
+
+    header {
+        background-color: #1E90FF;
+    }
+     
+     footer {
+         margin-bottom: 3em;
+         background-color: #1E90FF;
+     } 
+     
+     
+     /*General Styles (for all pages and devices)*/
+     html {
+         box-sizing: border-box;
+     }
+        
+     *, *:before, *:after{
+         box-sizing: inherit;
+     }
+     
+     body {
+     font-family: Helvetica, Arial, sans-serif;
+     font-size: 20px;
+     margin:1em; 
+     }
+     
+     .hide{
+         display: none;
+      }
+     
+     h1, h2, h3, h4, h5, h6 {
+         font-family: 'Sansita', sans-serif;
+     }
+     
+     #logo {
+         float: left;
+         margin-right: 10px;
+         height: 57px;
+     }
+     
+     .site-brand {
+         font-family: 'Sansita', sans-serif;
+         font-size: 10vw;
+         font-weight: 600;
+         position: relative;
+         margin-top: 5px;
+         margin-bottom: 5px;
+     }
+     
+     nav a{
+        text-decoration: none;
+     }
+     
+     li{
+        display: inline-block;
+        margin:0;
+        padding:0;
+        list-style: none;
+        color: black;
+     }
+     
+     .tile {
+         background-color: rgba(200, 200, 200, .6);
+         margin: 5px;
+         border: 1px solid;
+         border-radius: 15px;
+         padding: 5px;
+         text-align: center;
+         flex-grow: 1;
+         width:300px;
+     }
+     
+     .tile2{
+         margin: .2em auto;
+         border: 2px solid;
+         border-radius: 15px;
+         padding: 10px;
+         
+     }
+     
+     #location{
+         font-size:12px;
+     }
+     
+     #currentTemp{
+         font-size: 4em;
+         margin-top: .1em;
+         margin-bottom: .2em;
+     }
+     
+     #high{
+         font-size: 1em;
+         color: red;
+         display: inline;
+         padding: 1em;
+     }
+     
+     #low{
+         font-size:1em;
+         color:blue;
+         display: inline;
+         padding: 1em;
+     }
+     
+     #centerContainer{
+         display:flex;
+         flex-flow: row wrap;
+     } 
+     
+     h1{
+         margin: .5em 0;
+         padding-left: 6px;
+         font-size: 6vw;
+     }
+     /* Add correct Image to background */
+     .clear{
+         background-image: url(/weather-images/clear-150.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     .clouds{
+         background-image: url(/weather-images/clouds-150.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     .fog{
+         background-image: url(/weather-images/fog-150.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     .rain{
+         background-image: url(/weather-images/rain-150.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     .snow{
+         background-image: url(/weather-images/snow-150.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     /* Add correct Summary Photo thumbnail */
+     .clear1{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/clear-150.jpg);
+         z-index:100;
+         margin: -.6em auto 0;
+     }
+     
+     .clouds1{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/clouds-150.jpg);
+         z-index:100;
+         margin: -.6em auto 0;
+     }
+     .fog1{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/fog-150.jpg);
+         z-index:100;
+         margin: -.6em auto 0;
+     }
+     
+     .snow1{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/snow-150.jpg
+         z-index:100;
+         margin: -.6em auto 0;
+     }
+     
+     .rain1{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/rain-150.jpg
+         z-index:100;
+         margin: -.6em auto 0;
+     }
+     
+     
+     
+     #dial{
+         height: 150px;
+         width: 150px;
+         background: no-repeat center/85% url(/weather-images/wind-pointer-100.png);
+         z-index:100;
+         margin: -.6em auto 0;
+     } 
+     
+     #gusts{
+         font-size: 1.25em;
+         margin-top: -85px;
+         margin-bottom: 65px; 
+     }
+     
+     #accuweather-logo{
+         height: 25px;
+     }
+     
+     #searchBar {
+         grid-auto-rows: 0;
+     }
+     
+
+     /*4.  Large Screen Styles (Media Queries begin here)*/
+
+      @media screen and (min-width: 500px){
+     #page-nav{
+             padding: 0px;
+             position:relative;
+             font-size: inherit;
+             background-color:#1E90FF;
+     }
+     
+     #temperature h2, #wind h2 {
+         display: flex;
+         justify-content: center;
+     }
+     
+     footer{
+           margin-bottom: 10px;
+           background-color:#1E90FF;
+     }
+     
+     .site-brand {
+         font-size: 50px;
+         font-weight: 600;
+         position: relative;
+     }
+     
+     h1{
+         margin: .5em 0;
+         padding-left: 6px;
+         font-size: 3vw;
+     }
+     
+     #hourlyForecast{
+         position: relative; 
+     }
+     
+     #hourlyForecast h2::before{
+         content: ">";
+         font-size: 1.5em;
+         position: absolute;
+         right: 0;
+         top: 10px;
+         padding: 10px;
+     } 
+     
+     /* Rotate dial to wind direction*/
+     
+     .north, .n {
+         transform: rotate(0deg);
+     }
+     .ne{
+         transform: rotate(45deg);
+     }
+     .east, .e{
+         transform: rotate(90deg);
+     }
+     .se{
+         transform: rotate(135deg);
+     }
+     .south, .s{
+         transform: rotate(180deg);
+     }
+     .sw{
+         transform: rotate(225deg);
+     }
+     .west, .w{
+         transform: rotate(270deg);
+     }
+     .nw{
+         transform: rotate(315deg);
+     }
+     }
+     
+     /* Add correct Image to background */
+     .clear{
+         background-image: url(/weather-images/clear-500.jpg);     
+    }
+     .fog{
+         background-image: url(/weather-images/fog-500.jpg);
+     }
+     .clouds{
+         background-image: url(/weather-images/clouds-500.jpg);
+     }
+     .rain{
+         background-image: url(/weather-images/rain-500.jpg
+     }
+     .snow{
+         background-image: url(/weather-images/snow-500.jpg);
+     }
+     
+     /* Center the Summary Photo thumbnail */
+     .clear1{
+         height: 250px;
+         width: 250px;
+     }
+     
+     .clouds1{
+         height: 250px;
+         width: 250px;
+     }
+     .fog1{
+         height: 250px;
+         width: 250px;
+     }
+     
+     .snow1{
+         height: 250px;
+         width: 250px;
+     }
+     
+     .rain1{
+         height: 250px;
+         width: 250px;
+     }

@@ -1,91 +1,110 @@
 <!doctype html>
 <html lang="en-us">
+
  <head>
   <meta charset="UTF-8">
-  <title>Franklin, ID | The Weather Site | zip, elevation, location, temperature</title>
-  <meta name="description" content="Information pertaining to the weather in Greenville, Idaho.">
+  <title>Greenville, SC | Weather Site</title>
+  <meta name="description" content="gives weather information for Greenville South Carolina">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="/weather/screen.css" media="screen">
-  
+  <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
  </head>
+
  <body>
-   <div>
-    <header id= "header">
-      <img id= "logo" src="/weather/images/logo.png" alt="weather site logo">
-    <h1 id="sitename"> The Weather Site</h1> 
-  </header>
-<nav>
-      <ul id="nav">
-          <li><a href="current.html"> Current </a></li>
-          <li><a href="search.html"> Search </a></li>
-          <li><a href="franklin.html"> Franklin </a></li>
-          <li><a href="greenville.html"> Greenville </a></li>
-      </ul>
-  </nav>
-  <main>
-    <section id="title">
-        <h1 id="town">Greenville, Idaho</h1>
-        <ul id="info">
-            <li><strong>Zip:</strong> 29601 |</li>
-            <li><strong>Elevation:</strong> <span id='elevationNum'>294.437</span> ft.|</li>
-            <li><strong>Location:</strong> 34.85, -82.4</li>
-        </ul> <br>
-    </section>
+     <div id="content">
 
-    <div class="background">
+    <header id="page-header">
+    <img src="images/logo.jpeg" id="logo" alt="umbrella logo">
+    <p class="site-brand">The Weather Site</p>
+    </header>
 
-        <section class="sec">
+    <nav id="page-nav">
+        <ul>
+         <li><a href="index.html" title="Go to Current Location Weather Page">Current</a></li>
+         <li><a href="search.html" title="Go to Current Location Weather Page">Search</a></li>
+         <li><a href="franklin-weather.html" title="Go to Franklin Weather Page">Franklin</a></li>
+         <li><a href="greenville-weather.html" title="Go to Greenville Weather Page" >Greenville</a></li>
+         <li><a href="../../index.html" title="Go to my index">Home</a></li>
+        </ul>
+    </nav>
 
+    <main>
+        <section id="location">
+        <h1>Greenville, Idaho</h1>
+        <ul>
+            <li><b>Zip: </b>29601  |</li>
+            <li><b>Elevation: </b> 966 ft.  |</li>
+            <li><b>Location: </b>34.85° N, 82.4° E</li>
+        </ul>
+   
+        </section>
+
+       <div id="centerContainer" class="clouds">
+
+            <section id="temperature" class="tile ">
                 <h2>Temperature</h2>
-                <h3 id="temperature">55&deg;F</h3><br>
-                <ul id="temp">
-                    <li id="high">72&deg;F</li>
-                    <li id="low">51&deg;F</li>
-                </ul>
-                <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
-        </section>
-
-            <section class="sec">
-                <h2>Wind</h2>
-                <div id="windspeed"><div id ="dial" class="sw"></div>
-                <h3 id="wind">8 mph</h3></div>
-                <ul id="direction">
-                    <li><strong>Direction:</strong> SW</li>
-                    <li><strong>Gusts:</strong> 15-17 mph</li>
-                </ul>
+                <p id="currentTemp">65°F</p> 
+                <p id="high" title="high"><b>72°F</b></p>
+                <p id="low" title="low"><b>51°F</b></p>
+                <p>Feels Like <span id="feelTemp"></span>°F</p>
             </section>
-            <section class="sec" id="summary">
-                <h2>Thunderstorms</h2>
-                <img src="/weather-images/rain-500.jpg" alt="weather description image" id="weatherimg">
-                <p><strong>Precipitation: </strong>45</p>
-        </section>
+
+            <section id="wind" class="tile">
+                <h2>Wind</h2><br>
+                <p class="northMark">N</p>
+                <div id="dial" class="sw"></div>
+                <div id="wind-info">
+                <p id="gusts">2 mph</p>
+                </div>
+               <p><b>Direction: </b> SW<br>
+                  <b>Gusts: </b> 8mph</p>
+                </section>
+            
+            <section id="weatherOutlook" class="tile ">
+                <h2 id="summary">Thunderstorms</h2>
+                <img src="/weather-images/rain-150.jpg" alt="rain">
+            </section>
+
+        </div>
+
+        <section id="hourlyForecast" class="tile2">
+            <h2>Hourly Forecast</h2>
+            <ul>
+                <li>12am: 55°F | </li>
+                <li>1am: 55°F | </li>
+                <li>2am: 56°F | </li>
+                <li>3am: 57°F | </li>
+                <li>4am: 57°F | </li>
+                <li>5am: 57°F | </li>
+                <li>6am: 59°F | </li>
+                <li>7am: 59°F | </li>
+                <li>8am: 59°F | </li>
+                <li>9am: 60°F | </li>
+                <li>10am: 61°F | </li>
+                <li>11am: 63°F | </li>
+                <li>12pm: 64°F | </li>
+                <li>1pm: 64°F | </li>
+                <li>2pm: 66°F | </li>
+                <li>3pm: 69°F | </li>
+                <li>4pm: 71°F | </li>
+                <li>5pm: 72°F | </li>
+                <li>6pm: 71°F | </li>
+                <li>7pm: 61°F | </li>
+                <li>8pm: 57°F | </li>
+                <li>9pm: 55°F | </li>
+                <li>10pm: 52°F | </li>
+                <li>11pm: 51°F</li>              
+              
+            </ul>
+        </section>   
+
+    </main>
+
+    <footer id="page-footer">
+        <hr>
+    &copy;2018 Weather Site
+    </footer>
 
 </div>
-  <section id="forecast" >
-    <h3>Hourly Forecast</h3>
-      <ul id="scroll">
-        <li>1:00am 55F</li>
-        <li>2:00am 55F</li>
-        <li>3:00am 56F</li>
-        <li>4:00am 57F</li>
-        <li>5:00am 57F</li>
-        <li>6:00am 57F</li>
-        <li>7:00am 59F</li>
-        <li>8:00am 59F</li>
-        <li>9:00am 59F</li>
-        <li>10:00am 60F</li>
-        <li>11:00am 61F</li>
-        <li>12:00pm 63F</li>
-        <li>1:00pm 64F</li>
-      </ul>
-  </section>
-  
-  
-  </main>
- <footer>
-   &copy;2019 Kianna Baird
-  </footer>
-<script src="/weather/javascript/weather.js"></script>
-</div>
-    </body>
+<script src="javascript/functions.js"></script>
+</body>
 </html>
