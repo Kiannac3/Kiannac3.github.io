@@ -212,7 +212,7 @@
      .snow1{
          height: 150px;
          width: 150px;
-         background: no-repeat center/85% url(/weather-images/snow-150.jpg
+         background: no-repeat center/85% url(/weather-images/snow-150.jpg);
          z-index:100;
          margin: -.6em auto 0;
      }
@@ -220,7 +220,7 @@
      .rain1{
          height: 150px;
          width: 150px;
-         background: no-repeat center/85% url(/weather-images/rain-150.jpg
+         background: no-repeat center/85% url(/weather-images/rain-150.jpg);
          z-index:100;
          margin: -.6em auto 0;
      }
@@ -334,7 +334,7 @@
          background-image: url(/weather-images/clouds-500.jpg);
      }
      .rain{
-         background-image: url(/weather-images/rain-500.jpg
+         background-image: url(/weather-images/rain-500.jpg);
      }
      .snow{
          background-image: url(/weather-images/snow-500.jpg);
