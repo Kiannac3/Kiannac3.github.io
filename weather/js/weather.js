@@ -1,5 +1,5 @@
-console.log('My javascript is being read.');
-
+// let speed = document.getElementById('currWind');
+// let temp = document.getElementById('currTemp');
 
 const temp = 31;
 const speed = 5;
@@ -85,84 +85,65 @@ let weather = getCondition(weatherCondition);
 changeSummaryImage(weather);
 
 
-function getCondition(){
-    switch (weatherCondition){
-      case "clear":
-      case "Clear":
+//Determine what the value is.
+function getCondition(weatherCondition){
+    if (weatherCondition.includes ("clear") || weatherCondition.includes("sunny")) {
         return "clear";
-        break;
-      case "cloudy":
-      case "Cloudy":
-      case "clouds":
-      case "Clouds":
-      case "cloud":
-      case "Cloud":
-        return "cloud";
-        break;
-      case "fog":
-      case "Fog":
-      case "foggy":
-      case "Foggy":
-        return "fog";
-        break;
-      case "rain":
-      case "Rain":
-      case "rainy":
-      case "Rainy":
+    }
+    else if (weatherCondition.includes("rain")){
         return "rain";
-        break;
-      case "snow":
-      case "Snow":
-      case "snowing":
-      case "Snowing":
-          return "snow";
-        break;
-  
-  
-      default:
-      console.log("getCondition weather");
-  
     }
-  }
-  
-  function changeSummaryImage(){
-    switch (weatherKeyword) {
-      case "clear":
-          document.getElementById("curweather").className = "clear"
-        break;
-      case "cloud":
-        document.getElementById("curweather").className = "cloud"
-        break;
-      case "fog":
-        document.getElementById("curweather").className = "fog"
-        break;
-      case "rain":
-        document.getElementById("curweather").className = "rain"
-        break;
-      case "snow":
-        document.getElementById("curweather").className = "snow"
-        break;
-  
-      default:
-        console.log("end of changeSummaryImage function");
+    else if (weatherCondition.includes("wind")){
+        return "wind";
     }
-  }
-
-// Convert meters to feet
-function convertMeters(elevation) {
-    const ftelevation = document.getElementById('elevationNum');
-
-// Compute the elevation in feet
-    let feetElevation = 'elevationNum' * 3.281;
-    console.log(feetElevation);
-
-// Round the answer down to integer
-    feetElevation = Math.floor(feetElevation);
-
-// Display the elevation in Feet
-    console.log(feetElevation);
-
-// Display the elevation in HTML file
-    ftelevation.innerHTML = feetElevation + ' ft.';
+    else if (weatherCondition.includes("fog")){
+        return "fog";
+    }
+    else {
+        return "snow";
+    }
 }
+
+//Change class according to the value
+function changeSummaryImage(weatherCondition){
+    const largeframe = document.getElementById("largeframe");
+console.log(weatherCondition);
+    switch(weatherCondition){
+        case "clear":
+        largeframe.setAttribute("class", "clear");
+        break;
+        case "rain":
+        largeframe.setAttribute("class", "rain");
+        break;
+        case "wind":
+        largeframe.setAttribute("class", "wind");
+        break;
+        case  "fog":
+        largeframe.setAttribute("class", "fog");
+        break;
+        case "snow":
+        largeframe.setAttribute("class", "snow");
+        break;
+
+    }
+}
+
+
+    // Convert meters to feet
+
+    // let meters = document.getElementById('meters');
+    let meters = 1514.246;
+    let feet = meterstoFeet(meters);
+    let elevation = document.getElementById("elevation");
+    elevation.innerHTML = feet;
+
+    function meterstoFeet(meters){
+        //calculate meters to feet
+        let f = meters * 0.3048;
+        console.log(f);
+        // round to nearest integer
+        f = Math.floor(f);
+        return f;
+    }
+
     
