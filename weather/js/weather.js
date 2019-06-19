@@ -139,7 +139,7 @@ console.log(weatherCondition);
 
     function meterstoFeet(meters){
         //calculate meters to feet
-        let f = meters * 0.3048;
+        let f = meters * 3.2048;
         console.log(f);
         // round to nearest integer
         f = Math.floor(f);
