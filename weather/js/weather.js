@@ -80,10 +80,12 @@ function windDial(direction){
 }
 
 //Call functions
-const weatherCondition = "rain"; //Set your own value
-let weather = getCondition(weatherCondition);
-changeSummaryImage(weather);
+let weatherCondition = "snow"; //Set your own value
 
+let weather = getCondition(weatherCondition);
+console.log(weatherCondition);
+changeSummaryImage(weather);
+console.log(weather);
 
 //Determine what the value is.
 function getCondition(weatherCondition){
@@ -106,7 +108,7 @@ function getCondition(weatherCondition){
 
 //Change class according to the value
 function changeSummaryImage(weatherCondition){
-    const largeframe = document.getElementById("largeframe");
+    const largeframe = document.getElementById("centerContainer");
 console.log(weatherCondition);
     switch(weatherCondition){
         case "clear":
