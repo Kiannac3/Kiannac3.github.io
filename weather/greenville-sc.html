@@ -3,8 +3,8 @@
 
  <head>
   <meta charset="UTF-8">
-  <title>Greenville, SC | Weather Site</title>
-  <meta name="description" content="gives weather information for Greenville, Idaho">
+  <title id="page-title">Greenville, SC | Weather Site</title>
+  <meta name="description" content="gives weather information for Greenville, South Carolina">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
  </head>
@@ -21,18 +21,17 @@
         <ul>
          <li><a href="index.html" title="Go to Current Location Weather Page">Current</a></li>
          <li><a href="search.html" title="Go to Current Location Weather Page">Search</a></li>
-         <li><a href="franklin-weather.html" title="Go to Franklin Weather Page">Franklin</a></li>
-         <li><a href="greenville-weather.html" title="Go to Greenville Weather Page" >Greenville</a></li>
+         <li><a href="/weather/franklin-idaho.html" title="Go to Franklin Weather Page">Franklin</a></li>
+         <li><a href="/weather/greenville-sc.html" title="Go to Greenville Weather Page" >Greenville</a></li>
          <li><a href="../../index.html" title="Go to my index">Home</a></li>
         </ul>
     </nav>
-
-    <main>
-        <section id="location">
-        <h1>Greenville, Idaho</h1>
+    <section id="status">Please be patient while I get your weather information.</section>
+    <main id="main-content" class="hide">
+        <h1 id="contentHeading">Greenville, South Carolina</h1>
         <ul>
             <li><b>Zip: </b>29601  |</li>
-            <li><b>Elevation: </b> 966 ft.  |</li>
+            <li><b>Elevation: </b> <span id= "elevation">966</span>  ft. |</li>
             <li><b>Location: </b>34.85° N, 82.4° E</li>
         </ul>
    
@@ -42,7 +41,7 @@
 
             <section id="temperature" class="tile ">
                 <h2>Temperature</h2>
-                <p id="currentTemp">65°F</p> 
+                <p id="curTemp">65°F</p> 
                 <p id="high" title="high"><b>72°F</b></p>
                 <p id="low" title="low"><b>51°F</b></p>
                 <p>Feels Like <span id="feelTemp"></span>°F</p>
@@ -53,7 +52,7 @@
                 <p class="northMark">N</p>
                 <div id="dial" class="sw"></div>
                 <div id="wind-info">
-                <p id="gusts">2 mph</p>
+                <p id="wind-speed">2 mph</p>
                 </div>
                <p><b>Direction: </b> SW<br>
                   <b>Gusts: </b> 8mph</p>
@@ -106,5 +105,6 @@
 
 </div>
 <script src="js/weather.js"></script>
+<script src="js/localdata.js"></script>
 </body>
 </html>

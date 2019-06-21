@@ -17,6 +17,10 @@
      * ****************************** */
      
      /*Mobile First (styles specific to small screens)*/
+     .hide{
+        display: none;
+      }
+      
      #page-nav{
          position:fixed;
          bottom:0;
