@@ -80,7 +80,7 @@ function windDial(direction){
 }
 
 //Call functions
-let weatherCondition = "snow"; //Set your own value
+let weatherCondition = "rain"; //Set your own value
 
 let weather = getCondition(weatherCondition);
 console.log(weatherCondition);
@@ -148,47 +148,32 @@ console.log(weatherCondition);
         f = Math.floor(f);
         return f;
     }
-// Convert, Format time to 12 hour format
-function format_time(hour) {
 
+// Build the Hourly LocData list
+function buildHourlyData(locData){
+let nextHour = locData.nextHour;
+let hourlyList = '<li>' + format_time(nextHour) + ': ' + locData.hourTemp1 + '°F | </li>';
+
+for (let i = 1; i < 13; i++){
+    hourlyList += '<li>' + format_time(nextHour+i) + ': ' + locData['hourTemp'+i] + '°F | </li>';
+}
+console.log(nextHour);
+console.log(hourlyList);
+return hourlyList;
 }
 
-// Convert, Format time to 12 hour format
+
+// formats a value into a 12h AM/PM time string
 function format_time(hour) {
-    if(hour > 23){ 
-     hour -= 24; 
-    } 
-    let amPM = (hour > 11) ? "pm" : "am"; 
-    if(hour > 12) { 
-     hour -= 12; 
-    } 
-    if(hour == 0) { 
-     hour = "12"; 
-    } 
-    return hour + amPM;
-   }
-
-   // Build the hourly temperature list
-function buildHourlyData(nextHour,hourlyTemps) {
-    // Data comes from a JavaScript object of hourly temp name - value pairs
-    // Next hour should have a value between 0-23
-    // The hourlyTemps variable holds an array of temperatures
-    // Line 8 builds a list item showing the time for the next hour 
-    // and then the first element (value in index 0) from the hourly temps array
-     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
-     // Build the remaining list items using a for loop
-     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
-     }
-     console.log('HourlyList is: ' +hourlyListItems);
-     return hourlyListItems;
+    if(hour > 23){
+      hour -= 24;
     }
+    let amPM = (hour > 11) ? "pm" : "am";
+    if(hour > 12) {
+      hour -= 12;
+    } else if(hour == 0) {
+      hour = "12";
+    }
+    return hour + amPM;
+  } // end format_time function
 
-    // Get the next hour based on the current time
-let date = new Date(); 
-let nextHour = date.getHours() + 1;
-
-
-
-
-    

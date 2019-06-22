@@ -163,6 +163,11 @@
          padding-left: 6px;
          font-size: 6vw;
      }
+
+     .feelTemp{
+         font-size: 6vw;
+     }
+     
      /* Add correct Image to background */
      .clear{
          background-image: url(/weather-images/clear-150.jpg);

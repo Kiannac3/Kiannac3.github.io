@@ -32,46 +32,19 @@ function fetchData(weatherURL){
     console.log('fullName is: '+fullName);
 
     // Get the temperature data
-    let curTemp = g.Temp;
-    console.log(curTemp);
+    let locTemp = g.Temp;
+    console.log(locTemp);
 
     // Get the wind data 
-    let windSpeed = g.Wind;
-    console.log(windSpeed);
+    let wind = g.Wind;
+    console.log(wind);
 
     // Get the current conditions
-    let summary = g.Summary;
-    console.log(summary);
+
+    let high = g.High;
+    let low = g.Low;
 
     // Get the hourly data 
-    let elevation = g.Elevation;
-    console.log(elevation);
-
-    // Get location
-    let longitude = g.Longitude;
-    console.log(longitude);
-    let latitude = g.Latitude;
-    console.log(latitude);
-
-    // Get gusts
-    let gusts = g.Gusts;
-    console.log(gusts);
-
-    // Get wind Direction
-    let windDir = g.Direction;
-    console.log(windDir);
-
-    // Get high and low temp
-    let high = g.High;
-    console.log(high);
-    let low = g.Low;
-    console.log(low);
-
-    // Get Precipitiation
-    let precip = g.Precip;
-    console.log('precipitation is:' +precip);
-
-
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -95,63 +68,60 @@ function fetchData(weatherURL){
 document.getElementById("curTemp").innerHTML = curTemp;
 
     // Set the wind information
-document.getElementById("wind-speed").innerHTML = windSpeed;
-buildWC(windSpeed,curTemp)
+document.getElementById("wind-speed").innerHTML = wind;
+buildWC(wind,curTemp);
 
-      // Set the current conditions information
-      document.getElementById('sum-title').innerHTML = currCondition;
-
-      // Set the hourly temperature information
-      document.getElementById('overflow').innerHTML = buildHourlyData(nextHour, hourlyData);
-  
-      // Set background images
-      //let condition = getCondition(currCondition);
-      //changeSummaryImage(condition);
-  
-      // Set elevation
-      document.getElementById('elevation').innerHTML = meterstoFeet(elev);
-  
-      // Set zip
-      document.getElementById('zipcode').innerHTML = zip;
-  
-      // Set Long and Lat
-      document.getElementById('long').innerHTML = longitude + "&deg; N";
-      document.getElementById('lat').innerHTML = latitude + "&deg; W";
-  
-      // Set Gusts
-      document.getElementById('gust').innerHTML = gusts;
-  
-      // Set wind Direction
-      document.getElementById('dir').innerHTML = windDir;
-      
-      // Set high and low temp
-      document.getElementById('high').innerHTML = high;
-      document.getElementById('low').innerHTML = low;
-  
-      // Set Precipitation
-      document.getElementById('precip').innerHTML = precip;
-  
-      // Set wind dial
-      dial(windDir);
+    // Set the current conditions information
+  document.getElementById("zip").innerHTML = zip;
+  document.getElementById("elevation").innerHTML = elevation;
+  document.getElementById("longitute").innerHTML = long;
+  document.getElementById("latitude").innerHTML = lat;
 
 
+    // Set the hourly temperature information
+document.getElementById("overflow").innerHTML = buildHourlyData(nextHour , hourlyData);
 
-//    // Build the hourly temperature list
-function buildHourlyData(nextHour,hourlyTemps) {
-  // Data comes from a JavaScript object of hourly temp name - value pairs
-  // Next hour should have a value between 0-23
-  // The hourlyTemps variable holds an array of temperatures
-  // Line 175 builds a list item showing the time for the next hour 
-  // and then the first element (value in index 0) from the hourly temps array
-   let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F | </li>';
-   // Build the remaining list items using a for loop
-   for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-    hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F | </li>';
-   }
-   console.log('HourlyList is: ' +hourlyListItems);
-   return hourlyListItems;
-  }
+    // Change the status of the containers
+    contentContainer.setAttribute('class', ''); // removes the hide class
+    statusContainer.setAttribute('class', 'hide'); // hides the status container
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
+//  // Set the current conditions information
+//  document.getElementById('currCondition').innerHTML = currCondition;
 
+//  // Set background images
+//  let condition = getCondition(currCondition);
+//  changeSummaryImage(condition);
+
+ // Set elevation
+ document.getElementById('elevation').innerHTML = meterstoFeet(elevation);
+
+ // Set zip
+ document.getElementById('zip').innerHTML = zip;
+
+//  // Set Long and Lat
+//  document.getElementById('longitude').innerHTML = longitude + "&deg; N";
+//  document.getElementById('latitude').innerHTML = latitude + "&deg; W";
+
+//  // Set Gusts
+//  document.getElementById('gust').innerHTML = gust;
+
+//  // Set wind Direction
+//  document.getElementById('dir').innerHTML = windDir;
+ 
+//  // Set high and low temp
+//  document.getElementById('high').innerHTML = high;
+//  document.getElementById('low').innerHTML = low;
+
+//  // Set Precipitation
+//  document.getElementById('precipitation').innerHTML = precip;
+
+//  // Set wind dial
+//  windDial(windDir);
 
 
 
@@ -181,12 +151,12 @@ function buildHourlyData(nextHour,hourlyTemps) {
 //     // Data comes from a JavaScript object of hourly temp name - value pairs
 //     // Next hour should have a value between 0-23
 //     // The hourlyTemps variable holds an array of temperatures
-//     // Line 175 builds a list item showing the time for the next hour 
+//     // Line 8 builds a list item showing the time for the next hour 
 //     // and then the first element (value in index 0) from the hourly temps array
-//      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F | </li>';
+//      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
 //      // Build the remaining list items using a for loop
 //      for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-//       hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F | </li>';
+//       hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
 //      }
 //      console.log('HourlyList is: ' +hourlyListItems);
 //      return hourlyListItems;
