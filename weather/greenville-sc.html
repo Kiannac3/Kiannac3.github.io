@@ -30,9 +30,9 @@
     <main id="main-content" class="hide">
         <h1 id="contentHeading"></h1>
         <ul>
-            <li><b>Zip: </b>29601  |</li>
+            <li><b>Zip: </b><span id= "zipcode">29601</span>   |</li>
             <li><b>Elevation: </b> <span id= "elevation">966</span>  ft. |</li>
-            <li><b>Location: </b>34.85° N, 82.4° E</li>
+            <li><b>Location: </b><span id="long">34.85 </span>°N, <span id="lat">82.4 </span>° W</li>
         </ul>
    
         </section>
@@ -52,15 +52,16 @@
                 <p class="northMark">N</p>
                 <div id="dial" class="sw"></div>
                 <div id="wind-info">
-                <p id="wind-speed">2 mph</p>
+                <p id="windSpeed">2 mph</p>
                 </div>
-               <p><b>Direction: </b> SW<br>
-                  <b>Gusts: </b> 8mph</p>
+               <p><b id="dir">Direction: </b> SW<br>
+                  <b id="gust">Gusts: </b> 8mph</p>
                 </section>
             
             <section id="rain" class="tile ">
                 <h2 id="summary">Thunderstorms</h2>
                 <img src="/weather-images/rain-150.jpg" alt="small image of rain">
+            <p> <strong id= "precip">Precipitation:</strong> 0 </p>    
             </section>
 
         </div>
