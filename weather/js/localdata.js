@@ -4,8 +4,10 @@ let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 
+
 let weatherURL = "https://Kiannac3.github.io/weather/js/weather.json";
 fetchData(weatherURL);
+
 function fetchData(weatherURL){
   let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
@@ -21,7 +23,8 @@ function fetchData(weatherURL){
     // data is the full JavaScript object, but we only want the greenville part
     // shorten the variable and focus only on the data we want to reduce typing
     let g = data[cityName];
-// ************ Get the content ******************************
+
+    // ************ Get the content ******************************
 
     // Get the location data
     let locName = g.City;
@@ -32,19 +35,53 @@ function fetchData(weatherURL){
     console.log('fullName is: '+fullName);
 
     // Get the temperature data
-    let locTemp = g.Temp;
-    console.log(locTemp);
+    let currTemp = g.Temp;
+    console.log(currTemp);
 
     // Get the wind data 
-    let wind = g.Wind;
-    console.log(wind);
+    let windSpeed = g.Wind;
+    console.log(windSpeed);
 
     // Get the current conditions
-
-    let high = g.High;
-    let low = g.Low;
+    let currCondition = g.Summary;
+    console.log(currCondition);
 
     // Get the hourly data 
+    let hourlyData = g.Hourly;
+    console.log(hourlyData);
+
+    // Get elevation
+    let elev = g.Elevation;
+    console.log(elev);
+
+    // Get Zip
+    let zip = g.Zip;
+    console.log(zip);
+
+    // Get Location
+    let longitude = g.Longitude;
+    console.log(longitude);
+    let latitude = g.Latitude;
+    console.log(latitude);
+
+    // Get gusts
+    let gusts = g.Gusts;
+    console.log(gusts);
+
+    // Get wind Direction
+    let windDir = g.Direction;
+    console.log(windDir);
+
+    // Get high and low temp
+    let high = g.High;
+    console.log(high);
+    let low = g.Low;
+    console.log(low);
+
+    // Get Precipitiation
+    let precip = g.Precip;
+    console.log('precipitation is:' +precip);
+
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -59,27 +96,55 @@ function fetchData(weatherURL){
 
     // Set the Location information
     // Get the h1 to display the city location
-    let contentHeading = document.getElementById('contentHeading');
+    let contentHeading = document.getElementById('town');
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
 
 
     // Set the temperature information
-document.getElementById("curTemp").innerHTML = curTemp;
+    document.getElementById('temp').innerHTML = currTemp; 
 
     // Set the wind information
-document.getElementById("wind-speed").innerHTML = wind;
-buildWC(wind,curTemp);
+    document.getElementById('winds').innerHTML = windSpeed;
+    buildWC(windSpeed, currTemp);
 
     // Set the current conditions information
-  document.getElementById("zip").innerHTML = zip;
-  document.getElementById("elevation").innerHTML = elevation;
-  document.getElementById("longitute").innerHTML = long;
-  document.getElementById("latitude").innerHTML = lat;
-
+    document.getElementById('sum-title').innerHTML = currCondition;
 
     // Set the hourly temperature information
-document.getElementById("overflow").innerHTML = buildHourlyData(nextHour , hourlyData);
+    document.getElementById('overflow').innerHTML = buildHourlyData(nextHour, hourlyData);
+
+    // Set background images
+    let condition = getCondition(currCondition);
+    changeSummaryImage(condition);
+
+    // Set elevation
+    document.getElementById('elevation').innerHTML = meterstoFeet(elev);
+
+    // Set zip
+    document.getElementById('zipcode').innerHTML = zip;
+
+    // Set Long and Lat
+    document.getElementById('long').innerHTML = longitude + "&deg; N";
+    document.getElementById('lat').innerHTML = latitude + "&deg; W";
+
+    // Set Gusts
+    document.getElementById('gust').innerHTML = gusts;
+
+    // Set wind Direction
+    document.getElementById('dir').innerHTML = windDir;
+    
+    // Set high and low temp
+    document.getElementById('high').innerHTML = high;
+    document.getElementById('lowTemp').innerHTML = low;
+
+    // Set Precipitation
+    document.getElementById('precip').innerHTML = precip;
+
+    // Set wind dial
+    windDial(windDir);
+
+
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
@@ -90,74 +155,3 @@ document.getElementById("overflow").innerHTML = buildHourlyData(nextHour , hourl
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
 }
-//  // Set the current conditions information
-//  document.getElementById('currCondition').innerHTML = currCondition;
-
-//  // Set background images
-//  let condition = getCondition(currCondition);
-//  changeSummaryImage(condition);
-
- // Set elevation
- document.getElementById('elevation').innerHTML = meterstoFeet(elevation);
-
- // Set zip
- document.getElementById('zip').innerHTML = zip;
-
-//  // Set Long and Lat
-//  document.getElementById('longitude').innerHTML = longitude + "&deg; N";
-//  document.getElementById('latitude').innerHTML = latitude + "&deg; W";
-
-//  // Set Gusts
-//  document.getElementById('gust').innerHTML = gust;
-
-//  // Set wind Direction
-//  document.getElementById('dir').innerHTML = windDir;
- 
-//  // Set high and low temp
-//  document.getElementById('high').innerHTML = high;
-//  document.getElementById('low').innerHTML = low;
-
-//  // Set Precipitation
-//  document.getElementById('precipitation').innerHTML = precip;
-
-//  // Set wind dial
-//  windDial(windDir);
-
-
-
-// // Convert, Format time to 12 hour format
-// function format_time(hour) {
-
-// }
-
-
-// // Convert, Format time to 12 hour format
-// function format_time(hour) {
-//     if(hour > 23){ 
-//      hour -= 24; 
-//     } 
-//     let amPM = (hour > 11) ? "pm" : "am"; 
-//     if(hour > 12) { 
-//      hour -= 12; 
-//     } 
-//     if(hour == 0) { 
-//      hour = "12"; 
-//     } 
-//     return hour + amPM;
-//    }
-
-// // Build the hourly temperature list
-// function buildHourlyData(nextHour,hourlyTemps) {
-//     // Data comes from a JavaScript object of hourly temp name - value pairs
-//     // Next hour should have a value between 0-23
-//     // The hourlyTemps variable holds an array of temperatures
-//     // Line 8 builds a list item showing the time for the next hour 
-//     // and then the first element (value in index 0) from the hourly temps array
-//      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
-//      // Build the remaining list items using a for loop
-//      for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-//       hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
-//      }
-//      console.log('HourlyList is: ' +hourlyListItems);
-//      return hourlyListItems;
-//     }

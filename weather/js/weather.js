@@ -80,12 +80,10 @@ function windDial(direction){
 }
 
 //Call functions
-let weatherCondition = "rain"; //Set your own value
+// const weatherCondition = "rain"; //Set your own value
+// let weather = getCondition(weatherCondition);
+// changeSummaryImage(weather);
 
-let weather = getCondition(weatherCondition);
-console.log(weatherCondition);
-changeSummaryImage(weather);
-console.log(weather);
 
 //Determine what the value is.
 function getCondition(weatherCondition){
@@ -95,8 +93,8 @@ function getCondition(weatherCondition){
     else if (weatherCondition.includes("rain")){
         return "rain";
     }
-    else if (weatherCondition.includes("wind")){
-        return "wind";
+    else if (weatherCondition.includes("cloudy") || weatherCondition.includes("Thunderstorms")){
+        return "cloudy";
     }
     else if (weatherCondition.includes("fog")){
         return "fog";
@@ -108,7 +106,7 @@ function getCondition(weatherCondition){
 
 //Change class according to the value
 function changeSummaryImage(weatherCondition){
-    const largeframe = document.getElementById("centerContainer");
+    const largeframe = document.getElementById("largeframe");
 console.log(weatherCondition);
     switch(weatherCondition){
         case "clear":
@@ -117,8 +115,8 @@ console.log(weatherCondition);
         case "rain":
         largeframe.setAttribute("class", "rain");
         break;
-        case "wind":
-        largeframe.setAttribute("class", "wind");
+        case "cloudy":
+        largeframe.setAttribute("class", "cloud");
         break;
         case  "fog":
         largeframe.setAttribute("class", "fog");
@@ -134,46 +132,59 @@ console.log(weatherCondition);
     // Convert meters to feet
 
     // let meters = document.getElementById('meters');
-    let meters = 1514.246;
-    let feet = meterstoFeet(meters);
-    let elevation = document.getElementById("elevation");
-    elevation.innerHTML = feet;
-
+    // let meters = 1514.246;
+    // let feet = meterstoFeet(meters);
+    // let elevation = document.getElementById("elevation");
+    // elevation.innerHTML = feet;
 
     function meterstoFeet(meters){
         //calculate meters to feet
-        let f = meters * 3.2048;
+        let f = meters * 0.3048;
         console.log(f);
         // round to nearest integer
         f = Math.floor(f);
         return f;
     }
 
-// Build the Hourly LocData list
-function buildHourlyData(locData){
-let nextHour = locData.nextHour;
-let hourlyList = '<li>' + format_time(nextHour) + ': ' + locData.hourTemp1 + '°F | </li>';
 
-for (let i = 1; i < 13; i++){
-    hourlyList += '<li>' + format_time(nextHour+i) + ': ' + locData['hourTemp'+i] + '°F | </li>';
-}
-console.log(nextHour);
-console.log(hourlyList);
-return hourlyList;
-}
+// Get the next hour based on the current time
+//These are the variables for the function
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+let hourlyListItems;
+let hourlyTemps;
+
+//call functions
 
 
-// formats a value into a 12h AM/PM time string
+    // Convert, Format time to 12 hour format
 function format_time(hour) {
-    if(hour > 23){
-      hour -= 24;
+    if(hour > 23){ 
+        hour -= 24; 
+       } 
+       let amPM = (hour > 11) ? "pm" : "am"; 
+       if(hour > 12) { 
+        hour -= 12; 
+       } 
+       if(hour == 0) { 
+        hour = "12"; 
+       } 
+       return hour + amPM;
+}
+
+// Build the hourly temperature list
+function buildHourlyData(nextHour,hourlyTemps) {
+    // Data comes from a JavaScript object of hourly temp name - value pairs
+    // Next hour should have a value between 0-23
+    // The hourlyTemps variable holds an array of temperatures
+    // Line 175 builds a list item showing the time for the next hour 
+    // and then the first element (value in index 0) from the hourly temps array
+     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F | </li>';
+     // Build the remaining list items using a for loop
+     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F | </li>';
+     }
+     console.log('HourlyList is: ' +hourlyListItems);
+     return hourlyListItems;
     }
-    let amPM = (hour > 11) ? "pm" : "am";
-    if(hour > 12) {
-      hour -= 12;
-    } else if(hour == 0) {
-      hour = "12";
-    }
-    return hour + amPM;
-  } // end format_time function
 
