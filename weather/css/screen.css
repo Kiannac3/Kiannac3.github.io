@@ -109,6 +109,12 @@ a:hover {
     background-size: cover;
    }
 
+#smallFrame {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+
    .hide{
     display: none;
   }

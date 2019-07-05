@@ -4,10 +4,11 @@
  <head>
   <meta charset="UTF-8">
   <title id="page-title"> | Weather Info</title>
-  <meta name="description" content="gives weather information for Greenville, South Carolina">
+  <meta name="description" content="gives weather information for current location">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
  </head>
+ <!-- Kianna Baird, Zibiah Thamizhmaram, Serena Spotten -->
  <body> 
      <header id="header">
          <img src="images/logo.jpeg" alt="Purple Umbrella Logo" id="logo" />
@@ -23,13 +24,13 @@
             </ul>
      </nav>
      <section id="status">Please be patient while I get your weather information.</section>
-<main id="main-content" class="hide">
+<main id="main-content" class="iuh">
     <section id="title">
-        <h1 id="town">??</h1>
+        <h1 id="town"></h1>
         <ul id="location">
-            <li><strong>Zip:</strong><span id="zipcode">??</span> |</li>
-            <li><strong>Elevation:</strong> <span id="elevation">??</span> ft |</li>
-            <li><strong>Location:</strong> <span id="long">??</span>, <span id="lat">??</span> </li>
+            <li><strong>Zip:</strong> none<span id="zipcode"></span> |</li>
+            <li><strong>Elevation:</strong> <span id="elevation"></span> ft |</li>
+            <li><strong>Location:</strong> <span id="long"></span>, <span id="lat"></span> </li>
         </ul>
     </section>
 
@@ -39,26 +40,26 @@
         <section class="borders" id="temps">
 
                 <h2>Temperature</h2>
-                <h3 id="temp">??&deg;F</h3>
+                <h3 id="temp">&deg;F</h3>
                 <ul id="block">
-                    <li id="hi"><span id="high">??</span> &deg;F</li>
-                    <li id="low"><span id="lowTemp">??</span> &deg;F</li>
+                    <li id="hi"><span id="high"></span> &deg;F</li>
+                    <li id="low"><span id="lowTemp"></span> &deg;F</li>
                 </ul>
                 <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
         </section>
             <section class="borders" id="wind2">
                 <h2>Wind</h2>
                 <div id="windspeed"><div id="dial" class="w"></div>
-                <h3 id="wind"><span id="winds">??</span> mph</h3></div>
+                <h3 id="wind"><span id="winds"></span> mph</h3></div>
                 <ul>
-                    <li><p><strong>Direction:</strong> <span id="dir">??</span></p></li>
-                    <li><p><strong>Gusts:</strong> <span id="gust">??</span> mph</p></li>
+                    <li><p><strong>Direction:</strong> <span id="dir"></span></p></li>
+                    <li><p><strong>Gusts:</strong> <span id="gust"></span></p></li>
                 </ul>
             </section>
             <section class="borders" id="summary">
                 <h2 id="sum-title">Summary</h2>
-                <img src="/weather-images/rain-150.jpg" alt="small image of rainy weather" id="rainimg">
-                <p><strong>Precipitation:</strong> <span id="precip">??</span></p>
+                <div id = "smallFrame" class = "clear"></div>
+                
         </section>
         </div>
         <section id="hour-forecast" class="borders">
@@ -84,7 +85,7 @@
 <footer>
  &copy;2019, The Weather Site
 </footer>
-<script src="/weather/js/functions.js"></script>
-<script src="/weather/js/localdata.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/geo_loc.js"></script>
 </body>
 </html>
