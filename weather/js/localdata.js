@@ -161,7 +161,7 @@ let weatherURL = "https://Kiannac3.github.io/weather/js/weather.json";
   })
   .catch(function(error){
   console.log('There was a fetch problem: ', error.message);
-  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  statusContainer.innerHTML = 'Sorry, thfe data could not be processed.';
   })
 
 })
