@@ -1,30 +1,328 @@
-/*Table of Contents
+/*1. Mobile First (styles specific to small screens)*/
 
-1. Imports 
-2. General
-    2a.Navigation
-    2b.ul formating
-    2c.colors
-    2d.image and fonts
-    2e.links
-    2f.header
-3. Moble Rules
-    3a.fomating
-    3b.borders
-    3c.navigation format
-4. Large Screen Rules
-    4a. box rows
-    4b. navigation
-    4c. font size 
+    #content {
+        margin-left: 25px;
+        margin-right: 25px;
+        background-color: white;
+    }
 
-*/
+    #page-nav li{
+        text-align: center;
+        margin:2.5px;
+        padding:2.5px;
+        font-size: 3.25vw;
+    }
 
-/* 1. Imports */
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('normalize.css');
+    #page-nav{
+        width: 100vw; 
+        font-size: 4vw;
+    } 
 
-/* 2. General */
+    body p{
+        font-size: 13px;
+    }
 
-body {
-    background-image: url("../images/site/background.jpg");
+    #productContent img{
+        max-height: 120px;
+        max-width: 100%;
+    }
+
+    #Hero h2{
+        color:#990033;
+        font-size: 5vw;
+        margin-bottom: -2px;
+    }
+
+    #actionbtn{
+        width:100px;
+        margin: 5px;
+    }
+
+    #Hero ul{
+        list-style: none;
+        background-color: rgba(255,255,255,.5);
+        bottom: -5px;
+        top: 66px;
+        right: 0;
+        color:#990033;
+        position:absolute;
+        font-size: 2vw;
+    }
+
+    #Hero li{
+        margin-right: 20px;
+    }
+
+    #recipes{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    figure{
+        width: 50%;
+        margin:0;
+        text-align:center;
+    }
+  
+         
+/*2. General Styles (for all pages and devices)*/
+    html {
+         box-sizing: border-box;
+    }
+        
+    *, *:before, *:after{
+         box-sizing: inherit;
+    }
+   
+    body {
+        background-image: url(../images/site/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        line-height: normal;
+    }
+     
+    h1,h2,h3,h4,h5,h6 {
+        color: #093a3e;
+        font-family: "Poppins", sans-serif;
+    }
+
+    h1{
+        font-size: 40px;    }
+
+    .hide{
+         display: none;
+    }
+
+    #logo{
+        margin-left: 10px;
+        margin-top:5px;
+    }
+
+    #page-nav{
+        background-color: #de2227;
+        font-size: 1.2em;
+        max-width: 100%;
+    }
+     
+    #page-nav ul{
+        display:flex;
+        flex-flow: row wrap;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        margin:0;
+        padding-left: 5px;
+        color: white;
+        list-style-type: none;
+    }
+
+    #page-nav a{
+        color: white;
+        padding: .79em .5em;
+        text-decoration: none;
+    }
+
+    #page-nav a:hover{
+        background-color: white;
+        color:#990833;
+        cursor: pointer;
+    } 
+
+    footer{
+        background-color:red;
+        padding: .35em;
+        height: 120px;
+        text-align: center;
+    
+    }
+
+    footer p{
+        font-size: .75em;
+    }
+
+    hr {
+        background: black;
+        height: 5px;
+        border: 0;
+    }
+
+    #productContent{
+        margin: 10px;
+    }
+    #ProductName{
+        margin-bottom: -2px; 
+    }
+
+    #productPhoto{
+        float: left;
+        margin: 0;
+        margin-right: 10px;  
+  
+    }
+
+    #productPrice{
+        color: red;
+        font-size: 2em;
+        font-family: "Poppins", sans-serif;
+        text-align: right;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    #reviews, #recipes, #homeTitle{
+        margin: 10px;
+    }
+
+    #Hero{
+        position: relative;
+    }
+
+    #banner{
+        width:100%;
+    }
+
+
+    #recipeFotos{
+        display:flex;
+        flex-flow: row wrap;
+    }
+
+    
+          
+            
+/* 4.  Large Screen Styles (Media Queries begin here)*/
+    @media screen and (min-width: 500px){
+        #content {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #page-nav li{
+            margin:3px;
+            padding:3px;
+            text-align: center;
+            font-size: 2.5vw;
+        }
+
+        body p{
+            font-size: 16px;
+        }
+
+        #productPhoto{
+            width: 40%;
+            margin-left: 10px;
+        }
+
+       #productDescription{
+           margin-right: 10px;
+       }
+        
+        #Hero h2{
+        color:#990033;
+        font-size: 25px;
+        margin-bottom: -2px;
+     }
+
+   #actionbtn{
+        width:75%;
+        margin: 5px;
+    }
+
+    #Hero ul{
+        background-color: transparent;
+        color:#990033;
+        position:absolute;
+        top: 50px;
+        right: 5px;
+        font-size: 12px;
+    }
+
+    #Hero li{
+        margin-right: -50px;
+    }
+    #recipes{
+        display:flex;
+        flex-flow: column wrap;
+    }
+    
+    figure{
+        width: 50%;
+        margin:0;
+        text-align:center;
+    }
+    }
+
+    @media screen and (min-width: 800px){
+        #content {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #page-nav li{
+            margin:5px;
+            padding:5px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        body p{
+            font-size: 16px;
+        }
+
+        #productPhoto{
+            width: 27%;
+            margin-left: 20px;
+        }
+
+        #productContent img{
+            max-height: 200px;
+        }
+
+       #productDescription{
+           margin-right: 50px;
+       }
+        
+    #Hero h2{
+        color:#990033;
+        font-size: 35px;
+        margin-bottom: -2px;
+    }
+
+   #actionbtn{
+        width:100%;
+        margin: 5px;
+    }
+
+    #Hero ul{
+        background-color: transparent;
+        color:#990033;
+        position:absolute;
+        top: 100px;
+        right: 20px;
+        font-size: 18px;
+    }
+
+    #Hero li{
+        margin-right: 20px;
+    }
+
+    #bottomStuff{
+        display:flex;
+    }
+
+    #reviews{
+        width: 60vw;
+        margin-left: 150px;
+    }
+
+    #recipes{
+        width:40vw;
+        flex-flow: row wrap;
+        order:-1;
+    }
+    
+    figure{
+        text-align:center;
+    }
 }
