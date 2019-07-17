@@ -1,0 +1,30 @@
+/*Table of Contents
+
+1. Imports 
+2. General
+    2a.Navigation
+    2b.ul formating
+    2c.colors
+    2d.image and fonts
+    2e.links
+    2f.header
+3. Moble Rules
+    3a.fomating
+    3b.borders
+    3c.navigation format
+4. Large Screen Rules
+    4a. box rows
+    4b. navigation
+    4c. font size 
+
+*/
+
+/* 1. Imports */
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('normalize.css');
+
+/* 2. General */
+
+body {
+    background-image: url("../images/site/background.jpg");
+}
