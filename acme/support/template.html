@@ -1,31 +1,103 @@
 <!doctype html>
-<html lang="en-us">
+<noscript lang="en-us">
  <div id="layer"><head>
   <meta charset="UTF-8">
-  <title> | ACME</title>
+  <title>Home | ACME</title>
   <meta name="description" content="Information about ACME Roadrunner.">
   <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
     
  </head>
- <body> 
-     <header id="header">
-         <img src="../images/site/logo.png" alt="ACME Roadrunner logo" id="logo" />
- <h1 id="site-head">Content Title Here</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#">name</a></li>
-    </ul>
-</nav>
+ 
+ <body>
+    <div id="content">
 
-<main id="main-content" class="none"></main>
-</main>
+   <header id="page-header">
+   <img src="/acme/images/site/logo.png" id="logo" alt="ACME">
+   </header>
 
-<footer>
- &copy;2019, ACME Inc., All rights reserved. <br>
- All images used are believed to be "Fair Use". Please notify the author if any are not and they will be removed.
-</footer></div>
-<script src="js/functions.js"></script>
+   <nav id="page-nav">
+       <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="anvils">Anvils</a></li>
+        <li><a href="#" id="explosives">Explosives</a></li>
+        <li><a href="#" id="decoys">Decoys</a></li>
+        <li><a href="#" id="traps">Traps</a></li>
+       </ul>
+   </nav>
+
+   <main id="main">
+
+   <div id="home" class="unhide">
+       <section id="first">
+           <h1 id="title">Welcome to Acme!</h1>
+           <img src="/images/site/feature.jpg" alt="Wile E Cyote" id="banner">
+           <ul id="rocket">
+               <li><h2>Acme Rocket</h2></li>
+               <li>Quick lighting fuse</li>
+               <li>NHTSA approved seat belts</li>
+               <li>Mobile launch stand included</li>
+               <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="/images/site/iwantit.gif"></a></li>
+               </ul>
+       </section>
+       <div id= "info">
+           <section id="reviews">
+               <h2>Acme Rocket Reviews</h2>
+               <ul>
+                <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
+                <li>"That thing was fast!" (4/5)</li>
+                <li>"Talk about fast delivery." (5/5)</li>
+               <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+               <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+               </ul>
+           </section>
+           <section id="recipes">
+               <h2>Featured Recipes</h2>
+               <div id="recipePics">
+               <figure>
+               <img src="/images/recipes/bbqsand.jpg" alt ="BarBQue Sandwiches" id="bbq">
+               <figcaption><a href="#BBQ">Pulled Roadrunner<br> BBQ</a></figcaption>
+               </figure>
+               <figure>
+               <img src="/images/recipes/potpie.jpg" alt ="Chicken Pot Pie" id="pie">
+               <figcaption><a href="PotPie">Roadrunner Pot Pie</a></figcaption>
+               </figure>
+               <figure>
+               <img src="/images/recipes/soup.jpg" alt ="Roadrunner Soup" id="soup">
+               <figcaption><a href="Soups">Roadrunner Soup</a></figcaption>
+               </figure>
+               <figure>
+               <img src="/images/recipes/taco.jpg" alt ="Roadrunner Tacos" id=tTacos">
+               <figcaption><a href="Tacos">Roadrunner Tacos</a></figcaption>
+               </figure>
+               </div>
+           </section>
+      
+   </div>
+
+   </div>
+   <div id="productInfo" class= "hide">
+           <h1 id="product">Product Name</h1>
+           <figure id="productPic" >
+           </figure>
+           <p id="description">Here is where we have a nice little description of the tool.</p>
+           <p><b>Made by: </b><span id="manufacturer"> Manufacturer</span>
+           <br><b>Reviews: </b><span id="productReviews">How Many Reviews</span></p>
+           <p id="price">Price: $120.20</p>
+
+   </div>   
+   </main>
+
+   
+
+   <footer id="page-footer">
+       
+   &copy;2018 ACME Inc. All Rights Reserved
+   <p>All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed. </p>
+   </footer>
+</div>
+<script src="/js/functions.js"></script>
+<noscript>Javascript must be used for this site</noscript>
+
 </body>
 </html>
