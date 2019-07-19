@@ -9,7 +9,7 @@ function buildNav(){
     .then(function (data) {
     console.log('Json object from getCode function from buildNav:');
     console.log(data);
-    const page-Nav ={}; //Create and empty object
+    const acmeNav ={}; //Create and empty object
 
     let x;
     let keys = Object.keys(data);
