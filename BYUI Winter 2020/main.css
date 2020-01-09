@@ -1,0 +1,78 @@
+/*Table of Contents
+
+1. Imports 
+2. General
+    2a.Navigation
+    2b.ul formating
+    2c.colors
+    2d.image and fonts
+    2e.links
+    2f.header
+3. Moble Rules
+    3a.fomating
+    3b.borders
+    3c.navigation format
+4. Large Screen Rules
+    4a. box rows
+    4b. navigation
+    4c. font size 
+
+*/
+
+/* 1. Imports */
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+/* 2. General */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 90px;
+}
+
+/* 2a.Nagigation */
+
+nav a:link, a:visited{
+    color: #FAEBD7;
+    text-decoration: none;
+}
+
+nav a:active{
+    color:#DEB887;
+}
+nav a:hover {
+    color:#fff;
+    text-decoration: underline;
+}
+/* 2f.header */
+#header{
+    background-color: #6495ED;
+    display: flex;
+    align-items: center;
+}
+
+/* 2bla. background images */
+
+#largeframe {
+    background-size: cover;
+   }
+
+#smallFrame {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    margin: auto;
+}
+
+   .hide{
+    display: none;
+  }
+
+/* 3. Mobile Rules */
+
+/* 4. Large Screen Rules 
+
+@media only screen and (min-width: 800px) {
+
+
+
+    */
