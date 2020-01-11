@@ -2,34 +2,71 @@
 
 1. Imports 
 2. General
-    2a.Navigation
-    2b.ul formating
-    2c.colors
-    2d.image and fonts
-    2e.links
-    2f.header
-3. Moble Rules
-    3a.fomating
-    3b.borders
-    3c.navigation format
+3. Mobile Rules
 4. Large Screen Rules
-    4a. box rows
-    4b. navigation
-    4c. font size 
-
+   
 */
 
 /* 1. Imports */
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 /* 2. General */
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    margin-bottom: 90px;
+
+main{
+    background-color: white;
+    padding: 20px;
 }
 
-/* 2a.Nagigation */
+header{
+    font-family: Lora, serif;
+    background-color: #6495ED;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+h1{
+    font-size: 35px;
+    text-decoration: none;
+    color: #FAEBD7;
+}
+
+h2{
+    font-family: Lora, serif;
+    font-size: 30px;
+   color: black;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background: #FAEBD7;
+    font-size: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+header a:link, a:visited{
+    color: #FAEBD7;
+    text-decoration: none;
+}
+
+
+/*NAVIGATION */
+
+ul{
+    padding-left: 0;
+}
+
+li a{
+    font-size: 15px;
+    display: flex;
+}
+
+nav{
+    position: relative;
+    margin-top: 3em;
+}
 
 nav a:link, a:visited{
     color: #FAEBD7;
@@ -39,20 +76,43 @@ nav a:link, a:visited{
 nav a:active{
     color:#DEB887;
 }
-nav a:hover {
+nav a:hover{
     color:#fff;
     text-decoration: underline;
 }
-/* 2f.header */
-#header{
-    background-color: #6495ED;
-    display: flex;
-    align-items: center;
+
+
+article a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+article a:active{
+    color: #DEB887
+}
+
+article a:hover{
+    color:#6495ED;
+    text-decoration: underline;
+}
+
+.post-date{
+    color: lightgray;
+    font-size: 15px;
 }
 
 
 
 /* 3. Mobile Rules */
+
+img{
+    width: 50%;
+    height: auto;
+}
+
+
+
+
 
 /* 4. Large Screen Rules 
 
@@ -60,4 +120,4 @@ nav a:hover {
 
 
 
-    */
+}*/
