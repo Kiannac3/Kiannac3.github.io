@@ -50,22 +50,7 @@ nav a:hover {
     align-items: center;
 }
 
-/* 2bla. background images */
 
-#largeframe {
-    background-size: cover;
-   }
-
-#smallFrame {
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    margin: auto;
-}
-
-   .hide{
-    display: none;
-  }
 
 /* 3. Mobile Rules */
 
