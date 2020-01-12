@@ -13,26 +13,33 @@
 /* 2. General */
 
 main{
-    background-color: white;
+    background: #FAEBD7;
     padding: 20px;
+}
+
+article{
+    background-color: white;
+    padding: 10px;
 }
 
 header{
     font-family: Lora, serif;
     background-color: #6495ED;
     display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
     padding: 20px;
 }
 
-h1{
+h1 a{
     font-size: 35px;
     text-decoration: none;
-    color: #FAEBD7;
+    color: #FAEBD7 !important;
+    white-space: nowrap;
+    position: relative;
+    bottom: 40px; 
+    left: 15%;
 }
 
-h2{
+h2 a{
     font-family: Lora, serif;
     font-size: 30px;
    color: black;
@@ -40,7 +47,6 @@ h2{
 
 body{
     font-family: Helvetica, Arial, sans-serif;
-    background: #FAEBD7;
     font-size: 15px;
     flex-wrap: wrap;
     padding: 15px;
@@ -48,7 +54,6 @@ body{
 
 header a:link, a:visited{
     color: #FAEBD7;
-    text-decoration: none;
 }
 
 
@@ -56,31 +61,33 @@ header a:link, a:visited{
 
 ul{
     padding-left: 0;
+    text-decoration: none;
+    position: relative;
+    top: 25px;
+    list-style-type: none;
+    
 }
 
 li a{
     font-size: 15px;
     display: flex;
-}
-
-nav{
-    position: relative;
-    margin-top: 3em;
+    white-space: nowrap;
+    text-align: center;
 }
 
 nav a:link, a:visited{
     color: #FAEBD7;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 nav a:active{
     color:#DEB887;
 }
+
 nav a:hover{
     color:#fff;
     text-decoration: underline;
 }
-
 
 article a:link, a:visited{
     color: black;
@@ -96,6 +103,11 @@ article a:hover{
     text-decoration: underline;
 }
 
+p a:link {
+    color: #6495ED !important;
+    text-decoration: underline;
+}
+
 .post-date{
     color: lightgray;
     font-size: 15px;
@@ -103,21 +115,64 @@ article a:hover{
 
 
 
-/* 3. Mobile Rules */
+/* Mobile Rules */
 
 img{
-    width: 50%;
+    width: 60%;
     height: auto;
+    padding-left: 20%;
 }
 
 
 
-
-
-/* 4. Large Screen Rules 
+/*4. Large Screen Rules*/
 
 @media only screen and (min-width: 800px) {
 
+main{
+    background: #FAEBD7;
+    padding: 50px;
+}
+
+header{
+    transform: rotate(-90deg);
+    position: fixed;
+    right: 40%;
+    min-width: 100%;
+    min-height: 30%;
+}
+
+body{
+    padding-left: 20%;
+}
+
+nav{
+    transform: rotate(90deg);  
+    position: absolute;
+    left: 45%;
+    bottom: 20%;
+}
+
+h1 a{
+    position: absolute;
+    left: 45%;
+    bottom: 45%;
+    transform: rotate(90deg);  
+    font-size: 25px;
+}
+
+article{
+    padding: 3%;
+    padding-right: 30%;
+}
 
 
-}*/
+
+img{
+    width: 50%;
+    height: auto;        
+    padding-left: 20%;
+}
+
+
+}
