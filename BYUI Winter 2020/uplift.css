@@ -1,0 +1,176 @@
+/*
+Theme Name: Child Divi
+Version: 1.0
+Description: A child theme of Divi
+Author: Kiannac3
+Template: Divi
+*/
+
+@import url("../Divi/style.css");
+
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Arvo", serif;
+}
+
+.et_pb_section{
+  padding: 0px 0px !important;
+}
+
+#top-menu a:link, #top-menu a:visited, #et_top_search, .mobile_menu_bar{
+  border-top: 10px solid transparent;
+}
+
+
+#top-menu a:hover{
+  border-top: 10px solid #07162e;
+  opacity: 1 !important;
+}
+
+
+/*Mobile Menu*/
+.mobile_menu_bar::before{
+  color: #07162e;
+}
+
+.et_mobile_menu{
+  border-top: 10px solid #07162e;
+}
+
+#mobile_menu a:hover{
+  background-color: #07162e;
+  opacity: 1 !important;
+  color: white;
+}
+
+/*Top Slider*/
+.et_pb_fullwidth_section .et_pb_slider .et_pb_slide{
+  text-align: left;
+}
+
+.et_pb_fullwidth_section h2, .et_pb_slide_content{
+  text-shadow: 2px 2px 5px black;
+}
+
+
+.et_pb_fullwidth_section .et_pb_slider .et_pb_slide h2{
+  font-size: 2em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  text-transform: capitalize;
+}
+
+.et_pb_fullwidth_section .et_pb_slide_content{
+  width: 40%;
+  min-width: 250px;
+}
+
+.et_pb_fullwidth_section .et_pb_slide .et_pb_container{
+  min-height: 200px !important; 
+  padding: 90px 0px;
+}
+
+.et_pb_fullwidth_section .et_pb_slide_description{
+  padding: 0px !important;
+}
+
+/*Text Modules*/
+
+.et_pb_text{
+  text-align: left;
+  line-height: 1.3em;
+  font-size: 1.1em;
+  padding: 20px;
+}
+
+.et_pb_text h2{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.author{
+  font-weight: normal;
+  font-size: .7em;
+  display: block;
+  margin-top: 10px;
+}
+
+.dark_box{
+  background: #07162e;
+  color: white;
+}
+.dark_box h2{
+  color: white;
+}
+
+/*Buttons*/
+
+.button, .button:visited{
+  border: 1px solid #07162e;
+  color: #07162e;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: .8em;
+  display: inline-block;
+  margin-top: 10px;
+  transition: .5s;
+}
+
+.button:hover{
+  background: #07162e;
+  color: white;
+  padding: 5px 20px;
+}
+
+.button:active{
+  text-decoration: underline;
+}
+
+.dark_box .button{
+  background: #07162e;
+  border: 1px solid white;
+  color: white;
+}
+
+.dark_box .button:hover{
+  background: white;
+  color: #07162e;
+}
+
+/*Bottom Slider*/
+.et_pb_row .et_pb_slider_container_inner .et_pb_slide_description{
+  position: relative;
+  
+}
+
+.et_pb_row .et_pb_slider_container_inner .et_pb_slide_description .et_pb_slide_content{
+  background-color: rgba(7,22,46,.7);
+  padding: 15px 3em;
+  position: absolute;
+  bottom: -.2em;
+  right: -3em;
+  width: 120%;
+  
+}
+
+/*Media Query Fixes*/
+@media all and (max-width: 980px){
+  
+  .et_pb_fullwidth_section h2, .et_pb_fullwidth_section .et_pb_slide_content{
+    text-align: left;
+  }
+  
+   .et_pb_row .et_pb_slider_container_inner .et_pb_slide_description .et_pb_slide_content{
+  font-size: 12px;
+    background-color: rgba(7,22,46,.7);
+  padding: 10px 3em;
+  position: absolute;
+  bottom: -.2em;
+  right: -5em;
+  width: 120%;
+  
+}
+  
+}
+
