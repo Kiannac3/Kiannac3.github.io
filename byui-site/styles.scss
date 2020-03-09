@@ -1,6 +1,9 @@
 @import 'typography';
 @import 'icons';
 @import 'header';
+@import 'imagecomponents';
+
+
 
 $sm-break: 48em;
 // colors
@@ -33,15 +36,7 @@ img {
   border: 0;
 }
 
-header{
-  background-color: $byui-blue;
-  height: 20px;
-}
 
-.site-banner__right{
-  height: 20px;
-  
-}
 
 
 

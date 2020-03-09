@@ -1,0 +1,29 @@
+
+
+
+.component{
+    padding-bottom: 20px;
+
+}
+
+
+.main__byui, .main__image{
+    padding: 20px;
+    width: 100%;
+}
+
+.imagecomponents button{
+    border-bottom: 1px solid $dark-gray;
+    border-right: 1px solid $dark-gray;
+    border-left: 1px solid $dark-gray;
+    border-top: none;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    color: $link-blue;  
+    font-size: 15px;
+    margin-left: 15px;
+    float: left;
+    margin-top: -20px;
+    padding-top: 10px;
+}
